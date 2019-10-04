@@ -1,0 +1,14 @@
+@import 'tools/variables';
+@import 'tools/animations';
+@import 'tools/fonts';
+@import 'tools/functions';
+@import 'tools/mixins';
+
+@import 'bases/reset';
+@import 'bases/extend';
+@import 'bases/general';
+
+@import 'layouts/page';
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/footer';
