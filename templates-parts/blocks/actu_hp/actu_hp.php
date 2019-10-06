@@ -4,7 +4,7 @@ $title = get_field( 'title_actu_hp' ) ?: 'Titre de la section...' ; ?>
 <?php
 $new = array(
 	'post_type' => 'post',
-	'post_per_page' => 3,
+	'posts_per_page' => 3,
 );
 $the_query = new WP_Query( $new );
 if($the_query -> have_posts()): ?>

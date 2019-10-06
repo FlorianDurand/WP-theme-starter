@@ -196,7 +196,23 @@ function register_acf_block_types() {
 		'render_template'   => 'templates-parts/blocks/client_presta/client_presta.php',
 		'category'          => 'formatting',
 		'icon'              => 'admin-comments',
-		'keywords'          => array( 'ecole', 'Home page', 'page' ),
+		'keywords'          => array( 'confiance', 'prestation page', 'page' ),
+	));
+	acf_register_block_type(array(
+		'name'              => 'quality',
+		'title'             => __('Nos gages de qualités'),
+		'render_template'   => 'templates-parts/blocks/quality_presta/quality_presta.php',
+		'category'          => 'formatting',
+		'icon'              => 'admin-comments',
+		'keywords'          => array( 'Qualité', 'prestation page', 'page' ),
+	));
+	acf_register_block_type(array(
+		'name'              => 'partners',
+		'title'             => __('Nos Partenaires'),
+		'render_template'   => 'templates-parts/blocks/partenaire_presta/partenaire_presta.php',
+		'category'          => 'formatting',
+		'icon'              => 'admin-comments',
+		'keywords'          => array( 'Partenaires', 'Prestation page', 'page' ),
 	));
 }
 

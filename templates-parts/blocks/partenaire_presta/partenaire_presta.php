@@ -1,10 +1,10 @@
 <?php
-$title = get_field( 'title_clients_hp' ) ?: 'Titre de la section...' ; ?>
+$title = get_field( 'title_partenaire_presta' ) ?: 'Titre de la section...' ; ?>
 <h2><?php echo $title ?></h2>
 <?php
 $new = array(
-	'post_type' => 'client',
-	'post_per_page' => -1
+	'post_type' => 'partner',
+    'post_per_page' => -1
 );
 $the_query = new WP_Query( $new );
 if($the_query -> have_posts()): ?>
