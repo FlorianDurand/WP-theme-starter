@@ -21,7 +21,7 @@ $labels = array(
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
-        'supports'            => array( 'title','editor','thumbnail'),
+        'supports'            => array( 'title','editor','thumbnail' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,
@@ -33,6 +33,15 @@ $labels = array(
     );
 
     register_post_type($post_type_team, $args );
+
+	$taxonomy = "type_of_member";
+	$object_type = array("team");
+	$args = array(
+		'label' => __( 'Types de Membres' ),
+		'rewrite' => array( 'slug' => 'type_of_member' ),
+		'hierarchical' => true,
+	);
+	register_taxonomy( $taxonomy, $object_type, $args );
 }
 add_action( 'init', 'ajout_cpt_team' );
 

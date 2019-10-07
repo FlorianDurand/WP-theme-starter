@@ -24,7 +24,6 @@ if($the_query -> have_posts()): ?>
 	endwhile;
 endif;
 wp_reset_postdata();
-
 	the_field( 'title_actu' );
 	$number = get_field( 'number_of_article' );
 	$new = array(
