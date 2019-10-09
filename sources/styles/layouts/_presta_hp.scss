@@ -1,0 +1,69 @@
+.presta_hp{
+  position: relative;
+  z-index: 1;
+  .parallelogram_bg{
+    padding: 15vh 8.3vw 10vh 8.3vw;
+
+    .h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 35px;
+      font-family: $font;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    .domain {
+      margin-top: 11vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .single-presta {
+        margin-bottom: 8.5vh;
+        width: 30%;
+
+        img {
+          margin-bottom: 20px;
+        }
+
+        .h4 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 22px;
+          font-family: $font;
+          color: $white;
+        }
+
+        p {
+          min-height: 11vh;
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 26px;
+          color: $white;
+        }
+      }
+    }
+  }
+  .presta_link{
+    padding: 20px 60px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    background: $orange;
+    position: absolute;
+    width: fit-content;
+    right: 8.3vw;
+    bottom: -14px;
+    z-index: 3;
+  }
+}

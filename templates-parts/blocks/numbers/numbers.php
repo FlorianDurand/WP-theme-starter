@@ -1,25 +1,28 @@
 <?php
 $title = get_field( 'title_numbers_hp' ) ?: 'Titre de la section...' ; ?>
- <h2><?php echo $title ?></h2>
-<?php
-// check if the repeater field has rows of data
-if ( have_rows( 'key_repeater' ) ):
+<div class="number_hp">
+    <h2 class="h2"><?php echo $title ?></h2>
+    <div class="numbers">
+        <?php
+        // check if the repeater field has rows of data
+        if ( have_rows( 'key_repeater' ) ):
 
-	// loop through the rows of data
-	while ( have_rows( 'key_repeater' ) ) : the_row();
+            // loop through the rows of data
+            while ( have_rows( 'key_repeater' ) ) : the_row(); ?>
 
-		// display a sub field value
-		the_sub_field( 'number' ); echo ' ';
-		the_sub_field( 'description' ); ?>
-		<br>
+                <div class="number">
+	                <span><?php the_sub_field( 'number' ); ?></span>
+	                <?php the_sub_field( 'description' ); ?>
+                </div>
+            <?php endwhile;
 
-	<?php endwhile;
+        else :
 
-else :
+            // no rows found
 
-	// no rows found
-
-endif;
+        endif; ?>
+    </div>
+</div>
 
 
 

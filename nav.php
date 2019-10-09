@@ -1,4 +1,4 @@
-<div id="header">
+<header id="header">
 	<div class="nav">
 		<div class="left">
 			<a href="<?php echo get_home_url(); ?>">
@@ -17,4 +17,4 @@
 			</ul>
 		</nav>
 	</div>
-</div>
+</header>

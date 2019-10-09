@@ -1,0 +1,53 @@
+.actu_hp{
+  position: relative;
+  z-index: 1;
+  .parallelogram_bg{
+    padding: 15vh 8.3vw 10vh 8.3vw;
+    .news{
+      margin-top: 13vh;
+      width: 100%;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .single-news{
+        width: 23%;
+        color: $white;
+        img{
+          object-fit: cover;
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          height: 42vh;
+        }
+        .box{
+          float: right;
+          width: 90%;
+          position: relative;
+          z-index: 2;
+          margin-top: -61px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding: 13px 16px 13px 16px;
+          background: $orange;
+          h5{
+            margin-bottom: 15px;
+            width: fit-content;
+            font-family: $title;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+          }
+          a{
+            font-family: $font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

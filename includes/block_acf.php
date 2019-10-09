@@ -182,6 +182,14 @@ function register_acf_block_types() {
 		'keywords'          => array( 'prestation', 'Prestation page', 'page' ),
 	));
 	acf_register_block_type(array(
+		'name'              => 'solutions',
+		'title'             => __('Nos Solutions'),
+		'render_template'   => 'templates-parts/blocks/solutions_presta/solutions_presta.php',
+		'category'          => 'formatting',
+		'icon'              => 'book-alt',
+		'keywords'          => array( 'Solution', 'solutions', 'Prestation page', 'page' ),
+	));
+	acf_register_block_type(array(
 		'name'              => 'etude_steps',
 		'title'             => __('Déroulé de l\'étude'),
 		'description'       => __('Renseigner le déroulement d\'une étude'),
