@@ -1,0 +1,71 @@
+.last{
+  margin-bottom: -15vh;
+}
+.team_env{
+  position: relative;
+  z-index: 1;
+  .parallelogram_bg{
+    padding: 15vh 8.3vw 10vh 8.3vw;
+    p{
+      width: 76.5%;
+      margin-top: 20px;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.462857px;
+      color: $white;
+    }
+    .members{
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+      width: 100%;
+      display: inline-flex;
+      flex-wrap: wrap;
+      .member{
+        margin-bottom: -50px;
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        color: $white;
+        img{
+          width: 14vw;
+          height: 14vw*1.05;
+          object-fit: contain;
+        }
+        .h5{
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 22px;
+          margin-top: 18px;
+          margin-bottom: 10px;
+          max-width: 66%;
+        }
+        .role{
+          max-width: 66%;
+          font-family: $font;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 19px;
+        }
+        .degree{
+          max-width: 66%;
+          font-family: $font;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+    .col-3{
+      .member{
+        padding-left: 7%;
+        width: 33%;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.key_env{
+  padding: 17.5vh 8.3vw 19vh 8.3vw;
+  .dates{
+    margin-top: 18vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .date{
+      margin-bottom: 8vh;
+      width: 41.6%;
+      display: inline-flex;
+      align-items: flex-start;
+      .left{
+        font-family: $font;
+        color: $black;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        width: fit-content;
+        margin-right: 50px;
+      }
+      .right{
+        font-family: $font;
+        color: $dark-gray;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 35px;
+      }
+    }
+  }
+}

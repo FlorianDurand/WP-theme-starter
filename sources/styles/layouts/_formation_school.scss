@@ -1,0 +1,54 @@
+.formation_school{
+  position: relative;
+  z-index: 1;
+  .parallelogram_bg{
+    padding: 15vh 8.3vw 17.4vh 8.3vw;
+    .formations{
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-top: 9vh;
+      justify-content: space-between;
+      .formation{
+        padding: 50px 32px 71px 32px;
+        background-color: #FDFDFD;
+        width: 21.5vw;
+        height: 21.5vw;
+        display: flex;
+        flex-direction: column;
+        h4{
+          margin-bottom: 30px;
+          font-family: $title;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 23px;
+          color: $black;
+        }
+        p{
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 28px;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+  .school_link{
+    width: 21.5vw;
+    padding: 20px 0;
+    text-align: center;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    background: $orange;
+    position: absolute;
+    right: 8.3vw;
+    bottom: -14px;
+    z-index: 3;
+  }
+}

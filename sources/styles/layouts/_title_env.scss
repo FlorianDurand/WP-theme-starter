@@ -1,0 +1,27 @@
+.title_env{
+  width: 100%;
+  padding: 20vh 0 10vh 8.3vw;
+  display: inline-flex;
+  justify-content: space-between;
+  .left{
+    width: 37%;
+    .h2{
+      margin-top: 7.8vh;
+    }
+    p{
+      margin-top: 7.8vh;
+      font-family: $font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 35px;
+      color: $dark-gray;
+    }
+  }
+  img{
+    margin-right: -2px;
+    width: 51.9vw;
+    height: 51.9vw*0.7018;
+    object-fit: contain;
+  }
+}

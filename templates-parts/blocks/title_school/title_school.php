@@ -2,18 +2,24 @@
 
 
 $title = get_field( 'title_school' ) ?: 'Titre de la page...' ;
-$intro = get_field( 'intro_school' ) ?: 'intro...' ;
+$intro_left = get_field( 'intro_school_left' ) ?: 'intro gauche' ;
+$intro_right = get_field( 'intro_school_right' ) ?: 'intro droite' ;
+
 
 $background_image = get_field( 'background_school' );
-$size = 'full' ; // (thumbnail, medium, large, full or custom size)
+$size = 'fullscreen_school' ; // (thumbnail, medium, large, full or custom size)
 
 ?>
+<div class="title_school">
+	<?php if( $background_image ) {
 
-	<h2><?php echo $title ?></h2>
-	<p><?php echo $intro ?></p>
+		echo wp_get_attachment_image( $background_image, $size );
 
-<?php if( $background_image ) {
+	} ?>
+    <h1 class="h2"><?php echo $title ?></h1>
+    <div class="intro">
+        <p><?php echo $intro_left ?></p>
+        <p><?php echo $intro_right ?></p>
+    </div>
+</div>
 
-echo wp_get_attachment_image( $background_image, $size );
-
-}

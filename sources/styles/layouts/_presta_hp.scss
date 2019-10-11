@@ -52,7 +52,9 @@
     }
   }
   .presta_link{
-    padding: 20px 60px;
+    padding: 20px 0;
+    text-align: center;
+    width: 25vw;
     font-family: $font;
     font-style: normal;
     font-weight: bold;
@@ -61,7 +63,6 @@
     color: $white;
     background: $orange;
     position: absolute;
-    width: fit-content;
     right: 8.3vw;
     bottom: -14px;
     z-index: 3;

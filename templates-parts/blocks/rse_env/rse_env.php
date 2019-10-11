@@ -3,37 +3,43 @@ $title_rse = get_field( 'title_rse_env' ) ?: 'Titre de la section...' ;
 $intro_left_rse = get_field( 'intro_left_rse_env' ) ?: 'Intro de la section... (block gauche)' ;
 $intro_right_rse = get_field( 'intro_right_rse_env' ) ?: 'Intro de la section... (block droit)' ;
 ?>
- <h2><?php echo $title_rse ?></h2>
- <p><?php echo $intro_left_rse ?></p>
- <p><?php echo $intro_right_rse ?></p>
-<?php
-// check if the repeater field has rows of data
-if ( have_rows( 'rse_repeater' ) ):
+<div class="rse_env">
+    <h2 class="h2"><?php echo $title_rse ?></h2>
+    <div class="intro">
+        <p class="left_block"><?php echo $intro_left_rse ?></p>
+        <p class="right_block"><?php echo $intro_right_rse ?></p>
+    </div>
+    <div class="rse">
+	    <?php
+	    // check if the repeater field has rows of data
+	    if ( have_rows( 'rse_repeater' ) ):
 
-	// loop through the rows of data
-	while ( have_rows( 'rse_repeater' ) ) : the_row();
+		    // loop through the rows of data
+		    while ( have_rows( 'rse_repeater' ) ) : the_row(); ?>
 
-		// display a sub field value
-        $picto = get_sub_field( 'picto_rse' );
-		$size = 'full'; // (thumbnail, medium, large, full or custom size)
+			  <div class="single-rse">
+				  <?  $picto = get_sub_field( 'picto_rse' );
+				  $size = 'full'; // (thumbnail, medium, large, full or custom size)
 
-		if( $picto ) {
+				  if( $picto ) {
 
-			echo wp_get_attachment_image( $picto, $size );
+					  echo wp_get_attachment_image( $picto, $size );
 
-		}
-        echo '<br>';
-		the_sub_field( 'title' ); echo '<br> ';
-		the_sub_field( 'description' ); ?>
-		<br>
+				  } ?>
 
-	<?php endwhile;
+				  <h5><?php the_sub_field( 'title' ); ?></h5>
+				  <p><?php the_sub_field( 'description' ); ?></p>
+              </div>
+		    <?php endwhile;
 
-else :
+	    else :
 
-	// no rows found
+		    // no rows found
 
-endif;
+	    endif; ?>
+    </div>
+
+</div>
 
 
 

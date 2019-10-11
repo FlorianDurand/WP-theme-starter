@@ -6,9 +6,9 @@ $degree = get_field( 'degree_member' );
 ?>
 
 
-	<span><?php echo $role ?></span>
+	<div class="role"><?php the_field( 'role' ); ?></div>
     <br>
     <?php if ( $degree ) { ?>
-	<span><?php echo $degree ?></span>
-    <?php }
+	<span class="degree"><?php echo $degree ?></span>
+    <?php } ?>
 

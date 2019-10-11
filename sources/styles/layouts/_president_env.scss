@@ -1,0 +1,64 @@
+.president_env{
+  margin-bottom: 10vh;
+    position: relative;
+    z-index: 1;
+    .parallelogram_bg {
+      padding: 22.3vh 8.3vw 25vh 8.3vw;
+    .row{
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      position: relative;
+      & > p{
+        &:before{
+          position: absolute;
+          content: '“';
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 26px;
+          line-height: 35px;
+          color: $white;
+          top: -50px;
+        }
+        width: 42.6%;
+        font-family:$font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 35px;
+        color: $white;
+      }
+      .right{
+        width: 41.6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .right_block{
+          font-family:$font;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 35px;
+          color: $white;
+        }
+        .signature{
+          text-align: right;
+          font-family: $title;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 26px;
+          color: $white;
+        }
+      }
+    }
+    }
+    img{
+      position: absolute;
+      bottom: -20px;
+      left: 8.3vw;
+      width: 12.4vw;
+      height: auto;
+    }
+}

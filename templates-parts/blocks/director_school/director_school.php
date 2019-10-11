@@ -8,19 +8,20 @@ $size = 'full' ; // (thumbnail, medium, large, full or custom size)
 $link = get_field( 'link_director' );
 
 ?>
+<div class="director_school">
+    <h2 class="h2"><?php echo $title_director ?></h2>
+    <p><?php echo $director_speech ?></p>
+    <?php if( $director_image ) {
 
-	<h2><?php echo $title_director ?></h2>
-	<p><?php echo $director_speech ?></p>
+        echo wp_get_attachment_image( $director_image, $size );
 
-<?php if( $director_image ) {
+    }
+    if( $link ):
+        $link_url = $link['url'];
+        $link_title = $link['title'];
+        $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
+        <a class="button" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+    <?php endif; ?>
+</div>
 
-	echo wp_get_attachment_image( $director_image, $size );
-
-}
-if( $link ):
-	$link_url = $link['url'];
-	$link_title = $link['title'];
-	$link_target = $link['target'] ? $link['target'] : '_self';
-	?>
-    <a class="button" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-<?php endif;
