@@ -1,0 +1,28 @@
+.solutions_presta{
+  padding: 10.5vh 8.3vw 12.6vh 8.3vw;
+  .solutions{
+    margin-top: 12.6vh;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    .solution{
+      &:before{
+        content: "\2022";
+        color: $orange;
+        font-weight: bold;
+        font-size: 25px;
+        margin-right: 25px;
+      }
+      margin-right: 9%;
+      margin-bottom: 50px;
+      display: inline-flex;
+      width: 24%;
+      font-family: $font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: $dark-gray;
+    }
+  }
+}

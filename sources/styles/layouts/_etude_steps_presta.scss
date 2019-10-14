@@ -1,0 +1,49 @@
+.etude_steps{
+  .parallelogram_bg{
+    width: 100%;
+    padding: 18.5vh 8.3vw 32vh 8.3vw;
+    .h2{
+     margin-bottom: 5.5vh;
+    }
+    p{
+      margin-bottom: 11.1vh;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 32px;
+      color: $white;
+    }
+    .steps{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .step{
+        background-color: $white;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2.889vh;
+        height: 204px;
+        .left{
+          font-family: $title;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 32px;
+          color: $black;
+          text-align: center;
+          width: 32%;
+        }
+        .right{
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 16px;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

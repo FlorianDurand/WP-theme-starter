@@ -1025,4 +1025,209 @@ body {
 .last .parallelogram_bg {
   padding: 14.3vh 8.3vw 35.1vh 8.3vw; }
 
+.title_presta {
+  padding: 27vh 8.3vw 10vh 8.3vw; }
+  .title_presta .h2 {
+    width: 60%; }
+  .title_presta p {
+    width: 42.267%;
+    margin-top: 6.6vh;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 32px;
+    color: #808080; }
+
+.presta_presta .parallelogram_bg {
+  padding: 25vh 8.3vw 20vh 8.3vw; }
+  .presta_presta .parallelogram_bg .prestas {
+    width: 100%;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .presta_presta .parallelogram_bg .prestas .prestas_title {
+      width: 25%; }
+      .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title {
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+        cursor: pointer;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        margin-bottom: 13.4vh;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        position: relative; }
+        .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title span {
+          -webkit-transition: 0.2s all;
+          transition: 0.2s all;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 100px;
+          position: absolute;
+          color: rgba(156, 156, 156, 0.09); }
+        .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title .h3 {
+          -webkit-transition: 0.2s all;
+          transition: 0.2s all;
+          font-family: PT Serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 28px;
+          color: rgba(156, 156, 156, 0.49); }
+      .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title.title_active .h3, .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title:hover .h3 {
+        color: #FFFFFF; }
+      .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title.title_active span, .presta_presta .parallelogram_bg .prestas .prestas_title .single_presta_title:hover span {
+        color: rgba(232, 232, 232, 0.35); }
+    .presta_presta .parallelogram_bg .prestas .prestas_content {
+      width: 42.4%;
+      position: relative; }
+      .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content {
+        -webkit-transition: all ease-out 0.35s;
+        transition: all ease-out 0.35s;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        opacity: 0;
+        position: absolute; }
+        .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h2, .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h3, .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h4, .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h5 {
+          width: 50%;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 45px; }
+        .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content p {
+          margin-bottom: 11vh;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 28px; }
+      .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content.content_active {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px); }
+
+.solutions_presta {
+  padding: 10.5vh 8.3vw 12.6vh 8.3vw; }
+  .solutions_presta .solutions {
+    margin-top: 12.6vh;
+    list-style: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .solutions_presta .solutions .solution {
+      margin-right: 9%;
+      margin-bottom: 50px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: 24%;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #808080; }
+      .solutions_presta .solutions .solution:before {
+        content: "\2022";
+        color: #FBAF4E;
+        font-weight: bold;
+        font-size: 25px;
+        margin-right: 25px; }
+
+.etude_steps .parallelogram_bg {
+  width: 100%;
+  padding: 18.5vh 8.3vw 32vh 8.3vw; }
+  .etude_steps .parallelogram_bg .h2 {
+    margin-bottom: 5.5vh; }
+  .etude_steps .parallelogram_bg p {
+    margin-bottom: 11.1vh;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 32px;
+    color: #FFFFFF; }
+  .etude_steps .parallelogram_bg .steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%; }
+    .etude_steps .parallelogram_bg .steps .step {
+      background-color: #FFFFFF;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 2.889vh;
+      height: 204px; }
+      .etude_steps .parallelogram_bg .steps .step .left {
+        font-family: PT Serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 32px;
+        color: #03091E;
+        text-align: center;
+        width: 32%; }
+      .etude_steps .parallelogram_bg .steps .step .right {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        color: #808080; }
+
+.client_presta {
+  margin-top: -20vh; }
+  .client_presta .parallelogram_bg {
+    -webkit-clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 84%);
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 84%);
+    padding: 30vh 8.3vw 13.444vh 8.3vw; }
+    .client_presta .parallelogram_bg .h2 {
+      margin-bottom: 8.5vh; }
+    .client_presta .parallelogram_bg .before:before {
+      content: '“';
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 35px;
+      color: #FFFFFF; }
+    .client_presta .parallelogram_bg p {
+      width: 70.9%;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 32px;
+      color: #FFFFFF;
+      margin-bottom: 9.3vh; }
+    .client_presta .parallelogram_bg .img {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+
 /*# sourceMappingURL=app.css.map */

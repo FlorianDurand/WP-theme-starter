@@ -2,26 +2,31 @@
 
 
 $title = get_field( 'title_solutions_presta' ) ?: 'Titre de la section...' ; ?>
+<div class="solutions_presta">
+    <h2 class="h2"><?php echo $title ?></h2>
+    <ul class="solutions">
+        <?php
+        // check if the repeater field has rows of data
+        if ( have_rows( 'solutions_repeater' ) ):
 
-    <h2><?php echo $title ?></h2>
+            // loop through the rows of data
+            while ( have_rows( 'solutions_repeater' ) ) : the_row(); ?>
 
-<?php
-// check if the repeater field has rows of data
-if ( have_rows( 'solutions_repeater' ) ):
+            <div class="dot">
 
-	// loop through the rows of data
-	while ( have_rows( 'solutions_repeater' ) ) : the_row();
+            </div>
+              <li class="solution">
+	              <?php the_sub_field( 'solution' );  ?>
+              </li>
 
-		// display a sub field value
-		the_sub_field( 'solution' );  ?>
-        <br>
+            <?php endwhile;
 
-	<?php endwhile;
+        else :
 
-else :
+            // no rows found
 
-	// no rows found
-
-endif;
+        endif; ?>
+    </ul>
+</div>
 
 

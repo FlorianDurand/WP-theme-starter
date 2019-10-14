@@ -1,0 +1,36 @@
+.client_presta{
+  margin-top: -20vh;
+  .parallelogram_bg{
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 84%);
+    padding: 30vh 8.3vw 13.444vh 8.3vw;
+    .h2{
+      margin-bottom: 8.5vh;
+    }
+    .before{
+      &:before {
+        content: '“';
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 35px;
+        color: $white;
+      }
+    }
+    p{
+      width: 70.9%;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 32px;
+      color: $white;
+      margin-bottom: 9.3vh;
+    }
+    .img{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

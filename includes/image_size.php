@@ -11,4 +11,5 @@ function thumbnails_theme_support() {
 	add_image_size( 'junior_env', 972 , 682, true);
 	add_image_size( 'president_env', 232 , 241, true);
 	add_image_size( 'team_env', 262 , 277, true);
+	add_image_size( 'client_presta', 262 , 60, false);
 }

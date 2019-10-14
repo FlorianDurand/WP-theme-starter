@@ -302,6 +302,21 @@
                 "id": ""
             },
             "default_value": "#0B3232"
+        },
+        {
+            "key": "field_5da493e6b3284",
+            "label": "Couleur de fond #2 (orange de base)",
+            "name": "sub_color_bg",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FBAF4E"
         }
     ],
     "location": [
@@ -321,5 +336,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570618278
+    "modified": 1571066885
 }
