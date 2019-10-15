@@ -1,46 +1,80 @@
 <?php /* Template Name: Actualités */
 get_header(); ?>
-<?php
-$article = array(
-	'post_type' => 'post',
-	'posts_per_page' => 1
-);
-$the_query = new WP_Query( $article );
-if($the_query -> have_posts()): ?>
+<div class="last_actu">
 	<?php
-	while($the_query -> have_posts()): ?>
-		<?php
-		$the_query -> the_post(); ?>
-			<?php
-			$tags = get_tags();
-			foreach ( $tags as $tag ) {
-				echo $tag->{'name'} . '<br>';
-			}
-			the_title();
-			the_permalink();
-			the_post_thumbnail( 'medium' );
-			?>
-<?php
-	endwhile;
-endif;
-wp_reset_postdata();
-	the_field( 'title_actu' );
-	$number = get_field( 'number_of_article' );
-	$new = array(
+	$article = array(
 		'post_type' => 'post',
-		'posts_per_page' => $number,
+		'posts_per_page' => 1
 	);
-	$the_query = new WP_Query( $new );
+	$the_query = new WP_Query( $article );
 	if($the_query -> have_posts()): ?>
-	<?php while($the_query -> have_posts()): ?>
-		<?php $the_query -> the_post(); ?>
-		<?php the_title(); ?> <br>
-		<?php the_permalink(); ?>
-		<?php the_post_thumbnail( 'medium' ); ?>
-	<?php endwhile;?>
-<?php
+		<?php
+		while($the_query -> have_posts()): ?>
+			<?php
+			$the_query -> the_post(); ?>
+        <div class="left">
+            <ul>
+	        <?php
+	        $tags = get_tags();
+	        foreach ( $tags as $tag ) { ?>
+		        <li><?php echo $tag->{'name'}; ?></li>
+	     <?php } ?>
+            </ul>
+	        <h2 class="h2"><?php the_title(); ?></h2>
+            <a href="<?php the_permalink(); ?>">Lire l'article</a>
+        </div>
+
+			<?php the_post_thumbnail( 'last_actu' ); ?>
+		<?php
+		endwhile;
 	endif;
-	wp_reset_postdata();
+	wp_reset_postdata(); ?>
+</div>
+
+<div class="actus_actus">
+    <h2 class="h2"><?php the_field( 'title_actu' ); ?></h2>
+    <div class="news">
+		<?php
+		$number = get_field( 'number_of_article' );
+		$new = array(
+			'post_type' => 'post',
+			'posts_per_page' => $number,
+		);
+		$the_query = new WP_Query( $new );
+		if($the_query -> have_posts()): ?>
+			<?php while($the_query -> have_posts()): ?>
+				<?php $the_query -> the_post(); ?>
+                <div class="single-news">
+					<?php the_post_thumbnail( 'large' ); ?>
+                    <div class="box">
+                        <h5><?php the_title(); ?></h5>
+                        <a href="<?php the_permalink(); ?>">Lire l'article</a>
+                    </div>
+                </div>
+			<?php endwhile;?>
+		<?php endif;
+		wp_reset_postdata();?>
+    </div>
+</div>
 
 
-get_footer(); ?>
+
+	<div class="twitter_actus">
+        <div class="parallelogram_bg" style="background-color:<?php the_field( 'color_bg', 'option' ); ?>">
+            <h2 class="h2"> <?php the_field( 'title_twitter_actus' );?> </h2>
+            <div class="twitter">
+	            <?php the_content(); ?>
+            </div>
+        </div>
+	        <?php
+	        $link = get_field( 'link_twitter' );
+            if( $link ):
+		        $link_url = $link['url'];
+		        $link_title = $link['title'];
+		        $link_target = $link['target'] ? $link['target'] : '_self';
+		        ?>
+                <a class="twitter_link" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+	        <?php endif; ?>
+    </div>
+
+<?php get_footer(); ?>

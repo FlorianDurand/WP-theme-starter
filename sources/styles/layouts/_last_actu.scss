@@ -1,0 +1,50 @@
+.last_actu{
+  padding-left: 8.3vw;
+  margin-top: 18vh;
+  display: inline-flex;
+  align-items: flex-end;
+  .left{
+    color: $white;
+    padding: 35px;
+    ul{
+      width: 100%;
+      display: inline-flex;
+      li{
+        &:first-child{
+          margin-left: 0;
+        }
+        font-family: $font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        margin-left: 5px;
+        width: fit-content;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    width: 40.722vw;
+    background-color: $orange;
+    .h2{
+      margin-top: 20px;
+      color: $white;
+      width: 100%;
+    }
+    a{
+      margin-top: 75px;
+      text-align: right;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+
+    }
+  }
+  img{
+    width: 51.9vw;
+    height: 51.9vw*0.7847;
+    object-fit: contain;
+  }
+}

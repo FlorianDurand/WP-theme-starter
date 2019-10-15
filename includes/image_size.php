@@ -12,4 +12,6 @@ function thumbnails_theme_support() {
 	add_image_size( 'president_env', 232 , 241, true);
 	add_image_size( 'team_env', 262 , 277, true);
 	add_image_size( 'client_presta', 262 , 60, false);
+	add_image_size( 'quality_presta', 167 , 157, true);
+	add_image_size( 'last_actu', 972 , 763, true);
 }

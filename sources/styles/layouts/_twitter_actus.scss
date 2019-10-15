@@ -1,0 +1,39 @@
+.twitter_actus{
+  position: relative;
+  .parallelogram_bg{
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+    padding: 16.2vh 8.3vw 17.7vh 8.3vw;
+    display: flex;
+    flex-direction: column;
+    .h2{
+      width: 100%;
+    }
+    .twitter{
+      width: 100%;
+      display: inline-flex;
+      flex-wrap: wrap;
+      figure{
+        margin: 40px auto;
+      }
+      iframe{
+        height: 65vh!important;
+      }
+    }
+  }
+  .twitter_link{
+    width: 21.5vw;
+    padding: 20px 0;
+    text-align: center;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    background: $orange;
+    position: absolute;
+    right: 8.3vw;
+    bottom: -14px;
+    z-index: 3;
+  }
+}

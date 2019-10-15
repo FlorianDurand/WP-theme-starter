@@ -2,7 +2,7 @@
 $title = get_field( 'title_clients_hp' ) ?: 'Titre de la section...' ; ?>
 <div class="clients_hp">
 <h2 class="h2"><?php echo $title ?></h2>
-    <div class="swiper-container">
+    <div class="swiper-container" id="swiper-container">
         <div class="swiper-wrapper">
 <?php
 $new = array(
