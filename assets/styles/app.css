@@ -1414,7 +1414,7 @@ body {
         -ms-flex-align: end;
         align-items: flex-end;
         padding: 13px 16px 13px 16px;
-        background: #FBAF4E; }
+        background: #0B3232; }
         .actus_actus .news .single-news .box h5 {
           margin-bottom: 15px;
           width: -webkit-fit-content;
@@ -1487,5 +1487,73 @@ body {
     height: 40.72593vw;
     -o-object-fit: contain;
     object-fit: contain; }
+
+.single-article {
+  margin-top: 30vh; }
+  .single-article .first {
+    padding: 0 22.84722222vw 10vh 22.84722222vw; }
+    @media screen and (max-width: 1150px) {
+      .single-article .first {
+        padding: 0 15vw 10vh 15vw; } }
+    .single-article .first .top {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 37px; }
+      .single-article .first .top .date {
+        color: #808080; }
+      .single-article .first .top .tags {
+        margin-left: 46px;
+        color: #FBAF4E; }
+    .single-article .first h2 {
+      font-size: 38px;
+      line-height: 147.8%; }
+  .single-article .content {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: #808080; }
+    .single-article .content > * {
+      padding: 0 22.84722222vw; }
+      @media screen and (max-width: 1150px) {
+        .single-article .content > * {
+          padding: 0 15vw; } }
+    .single-article .content .custom {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 32px;
+      color: #FFFFFF;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+      position: relative;
+      -webkit-clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
+      clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
+      background-color: #0B3232;
+      color: #FFFFFF; }
+      .single-article .content .custom:before {
+        top: 17vh;
+        content: "“";
+        position: absolute;
+        font-weight: normal; }
+    .single-article .content h2, .single-article .content h3, .single-article .content h4, .single-article .content h5 {
+      margin-top: 70px;
+      margin-bottom: 32px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 32px;
+      color: #03091E; }
+    .single-article .content p {
+      margin-bottom: 70px; }
 
 /*# sourceMappingURL=app.css.map */

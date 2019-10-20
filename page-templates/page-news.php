@@ -12,6 +12,7 @@ get_header(); ?>
 		while($the_query -> have_posts()): ?>
 			<?php
 			$the_query -> the_post(); ?>
+            <?php $post_id[] = get_the_ID() ?>
         <div class="left">
             <ul>
 	        <?php
@@ -32,13 +33,14 @@ get_header(); ?>
 </div>
 
 <div class="actus_actus">
-    <h2 class="h2"><?php the_field( 'title_actu' ); ?></h2>
+    <h2 class="h2"><?php the_field( 'title_lasts_actu', 'option' ); ?></h2>
     <div class="news">
 		<?php
-		$number = get_field( 'number_of_article' );
+		$number = get_field( 'number_of_article_lasts_actu', 'option' );
 		$new = array(
 			'post_type' => 'post',
 			'posts_per_page' => $number,
+			'post__not_in' => $post_id
 		);
 		$the_query = new WP_Query( $new );
 		if($the_query -> have_posts()): ?>
