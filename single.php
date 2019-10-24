@@ -42,7 +42,7 @@ get_header(); ?>
                     <div class="single-news">
 						<?php the_post_thumbnail( 'large' ); ?>
                         <div class="box">
-                            <h5><?php the_title(); ?></h5>
+                            <h5 class="actus_title"><?php the_title(); ?></h5>
                             <a href="<?php the_permalink(); ?>">Lire l'article</a>
                         </div>
                     </div>

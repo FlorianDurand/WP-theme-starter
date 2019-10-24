@@ -231,6 +231,44 @@ body {
   .parallelogram_bg .h2 {
     color: #FFFFFF; }
 
+#cookie-notice {
+  height: 158px;
+  width: 100vw;
+  position: absolute;
+  background-color: #FBAF4E !important;
+  padding: 32px 8.3vw; }
+  #cookie-notice .cookie-notice-container {
+    padding: 0; }
+  #cookie-notice #cn-notice-text {
+    padding: 15px 0;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: #FFFFFF;
+    float: left;
+    width: 76%; }
+  #cookie-notice a#cn-accept-cookie {
+    background: #FFFFFF !important;
+    color: #FBAF4E;
+    margin-bottom: 10px; }
+  #cookie-notice a {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 42px;
+    border: none !important;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.3) !important;
+    float: right;
+    width: 20%;
+    height: 42px; }
+
 .Page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1424,7 +1462,8 @@ body {
           font-style: normal;
           font-weight: bold;
           font-size: 14px;
-          line-height: 18px; }
+          line-height: 18px;
+          height: 36px; }
         .actus_actus .news .single-news .box a {
           font-family: Open Sans;
           font-style: normal;
@@ -1520,6 +1559,9 @@ body {
     font-size: 18px;
     line-height: 32px;
     color: #808080; }
+    .single-article .content a {
+      color: #FBAF4E;
+      font-weight: 600; }
     .single-article .content > * {
       padding: 0 22.84722222vw; }
       @media screen and (max-width: 1150px) {

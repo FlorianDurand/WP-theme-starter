@@ -10,8 +10,8 @@ $size = 'client_presta' ; // (thumbnail, medium, large, full or custom size) ?>
 <div class="client_presta">
     <div class="parallelogram_bg" style="background-color:<?php the_field( 'sub_color_bg', 'option' ); ?>">
         <h2 class="h2"><?php echo $title ?></h2>
-        <div class="before"></div>
-        <p><?php echo $desc ?></p>
+        <div class="before" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true"></div>
+        <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true"><?php echo $desc ?></p>
         <div class="img">
 	        <?php
 	        if( $picture_client_presta ) {

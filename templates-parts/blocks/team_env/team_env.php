@@ -38,13 +38,15 @@ if ( $last ) {
        <?php
             $i = 0;
             $margin = 50;
-
+            $y = 1;
             if( $the_query -> have_posts() ): ?>
         <?php while( $the_query -> have_posts() ): ?>
         <?php $the_query -> the_post(); ?>
 
-            <?php $margin_top = $i * $margin;?>
-           <div class="member" style="margin-top: <?php echo $margin_top . 'px';?> ">
+            <?php $margin_top = $i * $margin;
+            $time = $y*50;
+            ?>
+           <div class="member" style="margin-top: <?php echo $margin_top . 'px';?> " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $time;?>" data-aos-once="true">
 	           <?php the_post_thumbnail( 'team_env' ); ?>
 	            <h5 class="h5"><?php the_title(); ?></h5>
 	           <?php the_content(); ?>
@@ -52,10 +54,13 @@ if ( $last ) {
         <?php
             if ( 4 === $col && 3 === $i ) {
                 $i = 0;
+                $y = 1;
             } elseif ( 3 === $col && 2 === $i) {
                 $i = 0;
+                $y = 1;
             } else {
                 $i++;
+                $y++;
             }
             ;?>
         <?php endwhile;?>

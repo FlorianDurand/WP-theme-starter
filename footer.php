@@ -78,6 +78,14 @@
             }
           }
         </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 	    <?php wp_footer(); ?>
+    <script>
+      document.getElementById( 'cn-accept-cookie' ).addEventListener( 'click', closeCookie )
+      document.getElementById( 'cn-refuse-cookie' ).addEventListener( 'click', closeCookie )
+    </script>
 	</body>
 </html>

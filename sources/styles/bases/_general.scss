@@ -1,4 +1,5 @@
 body{
+  //transition: margin-top 0.3s;
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
@@ -17,4 +18,46 @@ body{
   .h2{
     color: $white;
   }
+}
+#cookie-notice{
+  height: 158px;
+  width: 100vw;
+  position: absolute;
+  background-color: $orange !important;
+  padding: 32px 8.3vw;
+  .cookie-notice-container{
+    padding: 0;
+  }
+  #cn-notice-text{
+    padding: 15px 0;
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: $white;
+    float: left;
+    width: 76%;
+  }
+  a#cn-accept-cookie{
+    background: $white !important;
+    color: $orange;
+    margin-bottom: 10px;
+  }
+  a{
+    box-shadow: none;
+    text-shadow: none;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 42px;
+    border: none !important;
+    margin: 0;
+    background: rgba($white,0.3) !important;
+    float: right;
+    width: 20%;
+    height: 42px;
+  }
+
 }

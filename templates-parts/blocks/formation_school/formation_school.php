@@ -15,7 +15,7 @@ $link = get_field( 'link_formation' );
 		    // loop through the rows of data
 		    while ( have_rows( 'formation_repeater' ) ) : the_row(); ?>
 			    <?php $margin_top = $i * $margin;?>
-                <div class="formation" style="margin-top: <?php echo $margin_top . 'px';?> ">
+                <div class="formation" style="margin-top: <?php echo $margin_top . 'px';?> " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
 	                <h4><?php the_sub_field( 'title_formation' ); ?></h4>
 	                <p><?php the_sub_field( 'description_formation' ); ?></p>
                 </div>

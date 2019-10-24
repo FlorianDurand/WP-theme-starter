@@ -12,10 +12,10 @@ $title = get_field( 'title_solutions_presta' ) ?: 'Titre de la section...' ; ?>
             // loop through the rows of data
             while ( have_rows( 'solutions_repeater' ) ) : the_row(); ?>
 
-            <div class="dot">
+            <div class="dot" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
 
             </div>
-              <li class="solution">
+              <li class="solution" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
 	              <?php the_sub_field( 'solution' );  ?>
               </li>
 

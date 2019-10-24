@@ -14,18 +14,24 @@ if ( $last ) {
      <h3><?php echo $sub_title ?></h3>
      <div class="ranks">
 	     <?php
+	     $i=1;
 	     // check if the repeater field has rows of data
 	     if ( have_rows( 'ranking_repeater' ) ):
 
 		     // loop through the rows of data
 		     while ( have_rows( 'ranking_repeater' ) ) : the_row();?>
+			     <?php
+			     $time = 250*$i;
+			     $time_1 = $time+250;
+			     ?>
                 <div class="rank">
-	                <span><?php the_sub_field( 'ranking_number' );?></span>
-	                <p><?php the_sub_field( 'ranking_description' ); ?></p>
+	                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $time; ?>" data-aos-once="true"><?php the_sub_field( 'ranking_number' );?></span>
+	                <p data-aos-duration="1000" data-aos="fade-up" data-aos-delay="<?php echo $time_1; ?>" data-aos-once="true"><?php the_sub_field( 'ranking_description' ); ?></p>
                 </div>
 
 
-		     <?php endwhile;
+		     <?php $i++;
+             endwhile;
 
 	     else :
 

@@ -27,6 +27,10 @@
     }
   }
   .content{
+    a{
+      color: $orange;
+      font-weight: 600;
+    }
     font-family: $font;
     font-style: normal;
     font-weight: normal;
