@@ -1,0 +1,65 @@
+.form-contact{
+  margin-top: 17.67vh;
+  background-color: $orange;
+  clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
+  padding: 8vh 8.3vw;
+  .h2contact{
+    font-family: $title;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 147.8%;
+    color: #0B3232;
+  }
+  .fields{
+    margin-top: 39px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p{
+      margin-top: 18px;
+      font-family: $title;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 147.8%;
+      width: fit-content;
+      input{
+        width: 40.6vw;
+        background-color: $white;
+        padding: 22px;
+      }
+      .mail{
+        input{
+          width: 83.33vw;
+        }
+      }
+      .message{
+        textarea{
+          padding: 22px;
+          background-color: $white;
+          max-width: 83.33vw;
+          min-width: 83.33vw;
+          width: 83.33vw;
+        }
+      }
+    }
+    .submit-btn{
+      margin-top: 18px;
+      width: 100%;
+      input{
+        font-family: $title;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 77px;
+        color: $white;
+        float: right;
+        text-align: center;
+        background-color: $dark-green;
+        width: 37.6%;
+      }
+    }
+  }
+
+}

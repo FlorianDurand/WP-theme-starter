@@ -34,7 +34,8 @@ get_header(); ?>
 
 <div class="actus_actus">
     <h2 class="h2"><?php the_field( 'title_lasts_actu', 'option' ); ?></h2>
-    <div class="news">
+    <div class="news swiper-container-actus" >
+        <div class="swiper-wrapper">
 		<?php
 		$number = get_field( 'number_of_article_lasts_actu', 'option' );
 		$new = array(
@@ -46,7 +47,7 @@ get_header(); ?>
 		if($the_query -> have_posts()): ?>
 			<?php while($the_query -> have_posts()): ?>
 				<?php $the_query -> the_post(); ?>
-                <div class="single-news">
+                <div class="single-news swiper-slide">
 					<?php the_post_thumbnail( 'large' ); ?>
                     <div class="box">
                         <h5 class="actus_title"><?php the_title(); ?></h5>
@@ -56,6 +57,12 @@ get_header(); ?>
 			<?php endwhile;?>
 		<?php endif;
 		wp_reset_postdata();?>
+        </div>
+        <div class="swiper-scrollbar">
+            <div class="swiper-scrollbar-drag">
+
+            </div>
+        </div>
     </div>
 </div>
 
