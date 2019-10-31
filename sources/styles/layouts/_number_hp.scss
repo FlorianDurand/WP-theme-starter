@@ -1,12 +1,18 @@
 .number_hp{
   width: 100%;
   padding: 12.5vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 12.5vh 6.93vw 40px 6.93vw;
+  }
   .numbers{
     margin-top: 8.1vh;
     width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 800px){
+      flex-direction: column;
+    }
     .number{
       display: flex;
       flex-direction: column;
@@ -17,6 +23,12 @@
       font-weight: normal;
       font-size: 16px;
       line-height: 28px;
+      @media screen and (max-width: 800px){
+        font-size: 12px;
+        line-height: 28px;
+        width: 100%;
+        flex-direction: row;
+      }
       span{
         margin-bottom: 37px;
         font-family: $font;
@@ -25,6 +37,16 @@
         font-size: 60px;
         line-height: 32px;
         color: rgba(11, 50, 50, 0.5);
+        @media screen and (max-width: 800px){
+          margin-right: 14px;
+          font-size: 30px;
+          line-height: 32px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .none {
+          padding-top: 5px;
+        }
       }
     }
   }

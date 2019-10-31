@@ -1,14 +1,24 @@
 .key_env{
   padding: 17.5vh 8.3vw 19vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 9vh 6.93vw 50px 6.93vw;
+  }
   .dates{
-    margin-top: 18vh;
+    margin-top: 19vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 800px){
+      margin-top: 5vh;
+      flex-direction: column;
+    }
     .date{
-      margin-bottom: 8vh;
+      margin-bottom: 33px;
       width: 41.6%;
+      @media screen and (max-width: 800px){
+        width: 100%;
+      }
       display: inline-flex;
       align-items: flex-start;
       .left{
@@ -19,6 +29,11 @@
         font-size: 22px;
         width: fit-content;
         margin-right: 50px;
+        @media screen and (max-width: 800px){
+          margin-right: 10px;
+          font-size: 12px;
+          line-height: 24px;
+        }
       }
       .right{
         font-family: $font;
@@ -27,6 +42,10 @@
         font-weight: 300;
         font-size: 18px;
         line-height: 35px;
+        @media screen and (max-width: 800px){
+          font-size: 12px;
+          line-height: 24px;
+        }
       }
     }
   }

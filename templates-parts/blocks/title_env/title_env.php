@@ -8,7 +8,7 @@ $right_image = get_field( 'right_img_env' );
 $size = 'junior_env' ; // (thumbnail, medium, large, full or custom size)
 
 ?>
-<div class="title_env">
+<div class="title_env first-element">
     <div class="left">
         <h2 class="h2"><?php echo $title ?></h2>
         <p><?php echo $intro ?></p>

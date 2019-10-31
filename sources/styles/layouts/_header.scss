@@ -1,13 +1,35 @@
+#header.fixed{
+  box-shadow: 0 2px 0 0 #ededed;
+  background-color: #ffffff;
+  transition: all 0.5s ease-out;
+  position: fixed;
+}
+//#header.fixed.fixed-green{
+//  box-shadow: none;
+//  background-color:$dark-green;
+//}
+
 #header{
+  z-index: 50;
   position: absolute;
   width: 100vw;
-  padding: 35px 120px 35px  120px;
+  padding: 3.88vh 8.3vw 3.88vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 24px 6.93vw 24px 6.93vw;
+  }
   .nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
     .left{
-
+      img{
+        width: 50px;
+        height: 50px;
+        @media screen and (max-width: 800px){
+          width: 22px;
+          height: 22Px;
+        }
+      }
     }
     nav.menu-desktop{
       display: flex;
@@ -15,7 +37,6 @@
       ul{
         display: inline-flex;
         li{
-          //overflow: hidden;
           width: fit-content;
           a {
             transition:all 0.2s;
@@ -52,6 +73,148 @@
           }
         }
       }
+      @media screen and (max-width: 800px){
+        display: none;
+      }
+    }
+    nav.menu-mobile{
+      @media screen and (max-width: 800px){
+         span:nth-child(1) {
+          top: 4px;
+        }
+         span:nth-child(2) {
+          top: 11px;
+        }
+         span:nth-child(3) {
+          top: 18px;
+        }
+        &.open span{
+          background: $white;
+        }
+        &.open span:nth-child(1) {
+          top: 11px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+        &.open span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+        &.open span:nth-child(3) {
+          top: 11px;
+          -webkit-transform: rotate(-135deg);
+          -moz-transform: rotate(-135deg);
+          -o-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+        }
+        display: block;
+        width: 12px;
+        height: 22px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span{
+          display: block;
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          background: $dark-green;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: .5s ease-in-out;
+          -moz-transition: .5s ease-in-out;
+          -o-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+        }
+      }
+      display: none;
     }
   }
+}
+#menu-mobile.menu{
+  right: 0 !important;
+}
+.menu-mobile-pop#menu-mobile{
+  z-index: 49;
+  @media screen and (max-width: 800px){
+    display: inline-flex;
+    .close-mobile{
+      position: absolute;
+      right: 25px;
+      top: 30px;
+      svg{
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .nav-left{
+      margin-right: -1vw;
+      clip-path: polygon(0 0, 100% 100%, 100% 0);
+      background-color: $dark-green;
+      width: 20vw;
+      height: 100%;
+    }
+    .nav{
+      width: 100vw;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: $dark-green;
+      .menu{
+        overflow-y: scroll;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 30vh;
+        li{
+          &.current-menu-item a{
+            margin-left: 20px;
+            text-transform: uppercase;
+            color: $orange !important;
+          }
+          text-transform: uppercase;
+          margin-bottom: 17px;
+          font-family: $font;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 25px;
+          color: $white;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+
+      }
+      .social{
+        padding-left: 50px;
+        padding-right: 50px;
+        display: inline-flex;
+        margin-bottom: 80px;
+        justify-content: space-between;
+      }
+    }
+    position: fixed;
+    transition: all 0.7s ease-in;
+    height: 100vh;
+    width: 119vw;
+    right: -119vw;
+
+  }
+  display: none;
 }

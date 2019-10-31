@@ -1,6 +1,6 @@
 <?php /* Template Name: Actualités */
 get_header(); ?>
-<div class="last_actu">
+<div class="last_actu first-element">
 	<?php
 	$article = array(
 		'post_type' => 'post',

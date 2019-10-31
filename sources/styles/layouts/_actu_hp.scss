@@ -3,14 +3,27 @@
   z-index: 1;
   .parallelogram_bg{
     padding: 15vh 8.3vw 10vh 8.3vw;
+    @media screen and (max-width: 800px){
+      padding: 45px 6.93vw 56px 6.93vw;
+    }
     .news{
       margin-top: 13vh;
+      @media screen and (max-width: 800px){
+        margin-top: 38px;
+      }
       width: 100%;
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: space-between;
       .single-news{
         width: 23%;
+        @media screen and (max-width: 800px){
+          &:first-child{
+            display: block;
+          }
+          display: none;
+          width: 100%;
+        }
         color: $white;
         img{
           object-fit: cover;
@@ -38,6 +51,10 @@
             font-weight: bold;
             font-size: 14px;
             line-height: 18px;
+            @media screen and (max-width: 800px) {
+              font-size: 12px;
+              line-height: 16px;
+            }
           }
           a{
             font-family: $font;
@@ -45,6 +62,10 @@
             font-weight: 600;
             font-size: 12px;
             line-height: 28px;
+            @media screen and (max-width: 800px) {
+              font-size: 12px;
+              line-height: 28px;
+            }
           }
         }
       }

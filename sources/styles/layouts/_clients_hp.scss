@@ -11,5 +11,11 @@
     -webkit-transition-timing-function:linear!important;
     -o-transition-timing-function:linear!important;
     transition-timing-function:linear!important;
+    @media screen and (max-width: 800px) {
+      img{
+        width: 17vw;
+        height: 17vw*0.6;
+      }
+    }
   }
-  }
+}

@@ -9,7 +9,8 @@ $intro_right_rse = get_field( 'intro_right_rse_env' ) ?: 'Intro de la section...
         <p class="left_block"><?php echo $intro_left_rse ?></p>
         <p class="right_block"><?php echo $intro_right_rse ?></p>
     </div>
-    <div class="rse">
+    <div class="swiper-container-domain-mobile">
+    <div class="rse swiper-wrapper">
 	    <?php
 	    // check if the repeater field has rows of data
 	    if ( have_rows( 'rse_repeater' ) ):
@@ -17,7 +18,7 @@ $intro_right_rse = get_field( 'intro_right_rse_env' ) ?: 'Intro de la section...
 		    // loop through the rows of data
 		    while ( have_rows( 'rse_repeater' ) ) : the_row(); ?>
 
-			  <div class="single-rse">
+			  <div class="single-rse swiper-slide">
 				  <?  $picto = get_sub_field( 'picto_rse' );
 				  $size = 'full'; // (thumbnail, medium, large, full or custom size)
 
@@ -37,6 +38,8 @@ $intro_right_rse = get_field( 'intro_right_rse_env' ) ?: 'Intro de la section...
 		    // no rows found
 
 	    endif; ?>
+    </div>
+        <div class="swiper-pagination"></div>
     </div>
 
 </div>

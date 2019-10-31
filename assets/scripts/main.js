@@ -1,3 +1,81 @@
+var viewport_mobile = window.matchMedia("(max-width: 800px)")
+
+window.onscroll = function() {scrollFunction()};
+
+
+function scrollFunction() {
+  const firstContent = document.getElementsByClassName( 'first-element' )
+  let firstContentHeight = 0
+  if ( firstContent.length > 0 ) {
+    for (i = 0; i < firstContent.length; i++) {
+      firstContentHeight = firstContent[i].clientHeight;
+    }
+  } else {
+    firstContentHeight = 600;
+    if ( viewport_mobile.matches ) {
+      firstContentHeight = 430;
+    }
+  }
+  let first_step = 100;
+  let second_step = 300;
+  let third_step = firstContentHeight;
+  if ( viewport_mobile.matches ) {
+    first_step = 100;
+    second_step = 300;
+    third_step = firstContentHeight;
+  }
+  if (document.body.scrollTop > first_step || document.documentElement.scrollTop > first_step ) {
+    if ( viewport_mobile.matches ) {
+      document.getElementById("header").style.top = "-120px";
+    } else {
+      document.getElementById("header").style.top = "-170px";
+    }
+  } else {
+    document.getElementById("header").style.top = "0";
+  }
+  if (document.body.scrollTop > second_step || document.documentElement.scrollTop > second_step) {
+    document.getElementById("header").classList.add("fixed");
+  } else {
+    document.getElementById("header").classList.remove("fixed");
+  }
+  if (document.body.scrollTop > third_step || document.documentElement.scrollTop > third_step) {
+    document.getElementById("header").style.top = "0";
+  }
+}
+
+
+
+
+
+if (viewport_mobile.matches) {
+  function openMenu() {
+    document.getElementById("menu-mobile").classList.toggle("menu");
+    var close = document.getElementsByClassName( 'menu-mobile' )
+    // var fixed = document.getElementsByClassName( 'fixed' )
+    for (i = 0; i < close.length; i++) {
+      close[i].classList.toggle('open');
+    }
+    // for (i = 0; i < fixed.length; i++) {
+    //   fixed[i].classList.toggle('fixed-green');
+    // }
+    document.body.classList.toggle("fixed-body");
+  }
+  var swiperTeam = new Swiper('.swiper-container-team', {
+    spaceBetween: 20,
+    slidesPerView: 1,
+  })
+  var swiper = new Swiper('.swiper-container-domain-mobile', {
+
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  })
+
+
+}
+
+
 if ( document.getElementsByClassName( 'speech' ).length > 0 ) {
   let speech = document.getElementsByClassName( 'speech' )
   let contentHeight = document.getElementById( 'right_director' ).clientHeight
@@ -41,9 +119,7 @@ function GoToDevis () {
     setTimeout(function(){
       window.location.href=link
     }, 500);
-
   }
-
 }
 
 

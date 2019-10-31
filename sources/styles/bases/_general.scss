@@ -1,7 +1,10 @@
-body{
-  height: 100%;
+html, body{
   width: 100vw;
   overflow-x: hidden;
+}
+body.fixed-body{
+  height: 100%;
+  position: fixed;
 }
 #devis{
   z-index:5000;
@@ -10,6 +13,9 @@ body{
   position: fixed;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 800px){
+    display: none;
+  }
   .img{
     img{
       transition: transform 0.5s;
@@ -38,6 +44,10 @@ body{
   font-family: $font;
   color: $black;
   text-transform: uppercase;
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .parallelogram_bg{
   clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
@@ -46,6 +56,10 @@ body{
   }
 }
 #cookie-notice{
+  .cookie-notice-revoke-container{
+    width: 50%;
+  }
+
   height: 158px;
   width: 100vw;
   position: absolute;

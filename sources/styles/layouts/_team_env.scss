@@ -1,11 +1,18 @@
 .last{
   margin-bottom: -16vh;
+  @media screen and (max-width: 800px){
+    margin-bottom: -4vh;
+  }
 }
 .team_env{
   position: relative;
   z-index: 1;
   .parallelogram_bg{
-    padding: 15vh 8.3vw 10vh 8.3vw;
+    padding: 15vh 8.3vw 10vh 8.3vw !important;
+    @media screen and (max-width: 800px){
+      padding: 14vh 6.93vw 14vh 6.93vw !important;
+      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+    }
     p{
       width: 76.5%;
       margin-top: 20px;
@@ -16,6 +23,11 @@
       line-height: 26px;
       letter-spacing: 0.462857px;
       color: $white;
+      @media screen and (max-width: 800px){
+        font-size: 12px;
+        line-height: 24px;
+        width: 100%;
+      }
     }
     .members{
       margin-top: 10vh;
@@ -23,16 +35,31 @@
       width: 100%;
       display: inline-flex;
       flex-wrap: wrap;
+      @media screen and (max-width: 800px){
+        margin-top: 5vh;
+        display: -webkit-box;
+        margin-bottom: 0;
+      }
       .member{
         margin-bottom: -50px;
         display: flex;
         flex-direction: column;
         width: 25%;
         color: $white;
+        @media screen and (max-width: 800px){
+          margin-top: 30px !important;
+          width: 100%;
+          margin-bottom: 0;
+        }
         img{
           width: 14vw;
           height: 14vw*1.05;
           object-fit: contain;
+          @media screen and (max-width: 800px){
+            margin: auto;
+            width: 82vw;
+            height: 82vw*1.05;
+          }
         }
         .h5{
           font-family: $font;
@@ -64,6 +91,9 @@
     .col-3{
       .member{
         padding-left: 7%;
+        @media screen and (max-width: 800px){
+          padding-left: 0;
+        }
         width: 33%;
       }
     }

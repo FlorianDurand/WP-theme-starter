@@ -1,14 +1,26 @@
 .title_env{
   width: 100%;
   padding: 20vh 0 10vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 14vh 6.93vw 100px 6.93vw;
+  }
   display: inline-flex;
   justify-content: space-between;
   .left{
     width: 37%;
+    @media screen and (max-width: 800px){
+      width: 100%;
+    }
     .h2{
       margin-top: 7.8vh;
+      @media screen and (max-width: 800px){
+        margin-top: 0;
+      }
     }
     p{
+      @media screen and (max-width: 800px){
+        margin-top: 4vh;
+      }
       margin-top: 7.8vh;
       font-family: $font;
       font-style: normal;
@@ -16,6 +28,10 @@
       font-size: 16px;
       line-height: 35px;
       color: $dark-gray;
+      @media screen and (max-width: 800px) {
+        font-size: 12px;
+        line-height: 24px;
+      }
     }
   }
   img{
@@ -23,5 +39,8 @@
     width: 51.9vw;
     height: 51.9vw*0.7018;
     object-fit: contain;
+    @media screen and (max-width: 800px){
+      display: none;
+    }
   }
 }

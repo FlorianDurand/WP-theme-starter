@@ -10,7 +10,7 @@ $background_image = get_field( 'background_school' );
 $size = 'fullscreen_school' ; // (thumbnail, medium, large, full or custom size)
 
 ?>
-<div class="title_school">
+<div class="title_school first-element">
 	<?php if( $background_image ) {
 
 		echo wp_get_attachment_image( $background_image, $size );

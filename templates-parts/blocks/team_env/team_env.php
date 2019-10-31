@@ -34,7 +34,8 @@ if ( $last ) {
             $col = 3;
         }
         ?>
-        <div class="members <?php echo 'col-' . $col;?>">
+        <div class="swiper-container-team">
+        <div class="swiper-wrapper members <?php echo 'col-' . $col;?>">
        <?php
             $i = 0;
             $margin = 50;
@@ -46,7 +47,7 @@ if ( $last ) {
             <?php $margin_top = $i * $margin;
             $time = $y*50;
             ?>
-           <div class="member" style="margin-top: <?php echo $margin_top . 'px';?> " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $time;?>" data-aos-once="true">
+           <div class="swiper-slide member" style="margin-top: <?php echo $margin_top . 'px';?> " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $time;?>" data-aos-once="true">
 	           <?php the_post_thumbnail( 'team_env' ); ?>
 	            <h5 class="h5"><?php the_title(); ?></h5>
 	           <?php the_content(); ?>
@@ -66,6 +67,7 @@ if ( $last ) {
         <?php endwhile;?>
         <?php endif;
         wp_reset_postdata(); ?>
+        </div>
         </div>
     </div>
 </div>

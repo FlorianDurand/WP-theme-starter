@@ -3,7 +3,8 @@ $title = get_field( 'title_presta_hp' ) ?: 'Titre de la section...' ; ?>
 <div class="presta_hp">
 <div class="parallelogram_bg" style="background-color:<?php the_field( 'color_bg', 'option' ); ?>">
 <h2 class="h2"><?php echo $title ?></h2>
-<div class="domain">
+    <div class="swiper-container-domain-mobile">
+        <div class="domain swiper-wrapper">
 <?php
 $link = get_field( 'link' );
 $number_presta = get_field ( 'number_presta' );
@@ -17,7 +18,7 @@ $the_query = new WP_Query( $new );
 if($the_query -> have_posts()): ?>
 <?php while($the_query -> have_posts()): ?>
 <?php $the_query -> the_post(); ?>
-    <div class="single-presta">
+    <div class="single-presta swiper-slide">
 		<?php the_post_thumbnail( 'icon_presta' ); ?> <br>
 	    <h4 class="h4"><?php the_title(); ?></h4> <br>
 	    <?php the_excerpt(); ?>
@@ -25,6 +26,8 @@ if($the_query -> have_posts()): ?>
 <?php endwhile;?>
 <?php endif;
 wp_reset_postdata(); ?>
+</div>
+        <div class="swiper-pagination"></div>
 </div>
 </div>
 <?php if( $link ):

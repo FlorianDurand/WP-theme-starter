@@ -3,17 +3,9 @@
   z-index: 1;
   .parallelogram_bg{
     padding: 15vh 8.3vw 10vh 8.3vw;
-
-    .h2 {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 26px;
-      line-height: 35px;
-      font-family: $font;
-      color: $white;
-      text-transform: uppercase;
+    @media screen and (max-width: 800px){
+      padding: 15vh 6.93vw 10vh 6.93vw;
     }
-
     .domain {
       margin-top: 11vh;
       width: 100%;
@@ -21,7 +13,9 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-
+      @media screen and (max-width: 800px){
+        display: -webkit-box;
+      }
       .single-presta {
         margin-bottom: 8.5vh;
         width: 30%;
@@ -37,6 +31,11 @@
           line-height: 22px;
           font-family: $font;
           color: $white;
+
+          @media screen and (max-width: 800px) {
+            font-size: 14px;
+            line-height: 19px;
+          }
         }
 
         p {
@@ -47,9 +46,26 @@
           font-size: 14px;
           line-height: 26px;
           color: $white;
+          @media screen and (max-width: 800px) {
+            font-size: 12px;
+            line-height: 24px;
+          }
         }
       }
     }
+    .swiper-pagination{
+      display: none;
+    }
+    @media screen and (max-width: 800px){
+      .swiper-pagination{
+        display: block;
+        bottom: 70px;
+        .swiper-pagination-bullet-active{
+          background: white;
+        }
+      }
+    }
+
   }
   .presta_link{
     padding: 20px 0;
@@ -63,8 +79,15 @@
     color: $white;
     background: $orange;
     position: absolute;
-    right: 8.3vw;
+    right: 6.93vw;
     bottom: -14px;
     z-index: 3;
+    @media screen and (max-width: 800px){
+      width: 44.5vw;
+      bottom: -50px;
+    }
+  }
+  .swiper-pagination{
+    bottom: 0;
   }
 }

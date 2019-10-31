@@ -3,10 +3,19 @@
     position: relative;
     z-index: 1;
     .parallelogram_bg {
+
       padding: 22.3vh 8.3vw 25vh 8.3vw;
+      @media screen and (max-width: 800px){
+        clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+        padding: 13vh 6.93vw 10vh 6.93vw;
+      }
     .row{
       width: 100%;
       display: inline-flex;
+      @media screen and (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+      }
       justify-content: space-between;
       position: relative;
       & > p{
@@ -22,15 +31,26 @@
           top: -50px;
         }
         width: 42.6%;
+        @media screen and (max-width: 800px){
+          width: 100%;
+        }
         font-family:$font;
         font-style: normal;
         font-weight: 300;
         font-size: 14px;
         line-height: 35px;
+        @media screen and (max-width: 800px){
+          font-size: 12px;
+          line-height: 24px;
+        }
         color: $white;
       }
       .right{
         width: 41.6%;
+        @media screen and (max-width: 800px){
+          margin-top: 10px;
+          width: 100%;
+        }
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -41,6 +61,10 @@
           font-size: 14px;
           line-height: 35px;
           color: $white;
+          @media screen and (max-width: 800px) {
+            font-size: 12px;
+            line-height: 24px;
+          }
         }
         .signature{
           text-align: right;
@@ -50,6 +74,12 @@
           font-size: 20px;
           line-height: 26px;
           color: $white;
+          @media screen and (max-width: 800px){
+            margin-top: 30px;
+            text-align: left;
+            font-size: 12px;
+            line-height: 16px;
+          }
         }
       }
     }
@@ -60,5 +90,9 @@
       left: 8.3vw;
       width: 12.4vw;
       height: auto;
+      @media screen and (max-width: 800px){
+        height: 80px;
+        width: 75px;
+      }
     }
 }
