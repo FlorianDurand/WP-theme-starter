@@ -1,5 +1,8 @@
 .director_school{
   padding: 22.2vh 8.3vw 8.1vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 12.2vh 6.93vw 8.1vh 6.93vw;
+  }
   .speech{
     transition: all 0.3s;
     &:after{
@@ -15,6 +18,9 @@
     position: relative;
     margin-top: 60px;
     padding-top: 30px;
+    @media screen and (max-width: 800px){
+      margin-top: 26px;
+    }
     p{
       padding-bottom: 70px;
       position: absolute;
@@ -25,6 +31,12 @@
       line-height: 29px;
       color: $black;
       width: 35.55vw;
+      @media screen and (max-width: 800px){
+        padding-bottom: 10px;
+        width: 100-6.93*2vw;
+        font-size: 12px;
+        line-height: 24px;
+      }
       &:first-child{
         &:before{
           top: -35px;
@@ -45,6 +57,10 @@
       width: 35.55vw;
       display: flex;
       flex-direction: column;
+      @media screen and (max-width: 800px){
+        width: 100-6.93*2vw;
+        left: 0;
+      }
       p{
         position: relative;
         width: 100%;
@@ -69,6 +85,10 @@
         line-height: 40px;
         display: grid;
         grid-template-columns: 1fr 100px;
+        @media screen and (max-width: 800px){
+          font-size: 12px;
+          line-height: 24px;
+        }
         span{
           padding-right: 30px;
           display: flex;

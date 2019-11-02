@@ -79,27 +79,49 @@ if (viewport_mobile.matches) {
 if ( document.getElementsByClassName( 'speech' ).length > 0 ) {
   let speech = document.getElementsByClassName( 'speech' )
   let contentHeight = document.getElementById( 'right_director' ).clientHeight
+  if (viewport_mobile.matches) {
+    let right = document.getElementById('right_director')
+    right.style.marginTop = contentHeight + 'px'
+  }
   for (i = 0; i < speech.length; i++) {
     speech[i].style.height = contentHeight*0.6 + 'px';
   }
   document.getElementById( 'director_link' ).addEventListener( 'click', showMore )
 }
 function showMore () {
+
   let y
   let speech = document.getElementsByClassName( 'speech' )
   let button = document.getElementById( 'director_link' )
   let contentHeight = document.getElementById( 'right_director' ).clientHeight
-  for (i = 0; i < speech.length; i++) {
-    speech[i].classList.toggle("visible")
-    button.classList.toggle( "rotate")
-    let visible = document.getElementsByClassName( 'visible' )
-    if (visible.length > 0) {
-      for ( y = 0; y < visible.length; y++ ) {
-        visible[y].style.height = contentHeight + 'px';
+  if (viewport_mobile.matches) {
+    for (i = 0; i < speech.length; i++) {
+      speech[i].classList.toggle("visible")
+      button.classList.toggle( "rotate")
+      let visible = document.getElementsByClassName( 'visible' )
+      if (visible.length > 0) {
+        for ( y = 0; y < visible.length; y++ ) {
+          visible[y].style.height = contentHeight*2.03 + 'px';
+        }
+      } else {
+        for (i = 0; i < speech.length; i++) {
+          speech[i].style.height = contentHeight*0.6 + 'px';
+        }
       }
-    } else {
-      for (i = 0; i < speech.length; i++) {
-        speech[i].style.height = contentHeight*0.6 + 'px';
+    }
+  } else {
+    for (i = 0; i < speech.length; i++) {
+      speech[i].classList.toggle("visible")
+      button.classList.toggle( "rotate")
+      let visible = document.getElementsByClassName( 'visible' )
+      if (visible.length > 0) {
+        for ( y = 0; y < visible.length; y++ ) {
+          visible[y].style.height = contentHeight + 'px';
+        }
+      } else {
+        for (i = 0; i < speech.length; i++) {
+          speech[i].style.height = contentHeight*0.6 + 'px';
+        }
       }
     }
   }

@@ -340,7 +340,7 @@ body.fixed-body {
   padding: 3.88vh 8.3vw 3.88vh 8.3vw; }
   @media screen and (max-width: 800px) {
     #header {
-      padding: 24px 6.93vw 24px 6.93vw; } }
+      padding: 18px 6.93vw 18px 6.93vw; } }
   #header .nav {
     width: 100%;
     display: -webkit-box;
@@ -1478,9 +1478,15 @@ body.fixed-body {
   height: 65vh;
   -o-object-fit: cover;
   object-fit: cover; }
+  @media screen and (max-width: 800px) {
+    .title_school img {
+      height: 30vh; } }
 
 .title_school .h2 {
   margin: 20vh 8.3vw 0 8.3vw; }
+  @media screen and (max-width: 800px) {
+    .title_school .h2 {
+      margin: 10vh 6.93vw 0 6.93vw; } }
 
 .title_school .intro {
   margin: 60px 8.3vw 19vh 8.3vw;
@@ -1490,6 +1496,16 @@ body.fixed-body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 800px) {
+    .title_school .intro {
+      margin: 40px 6.93vw 0 6.93vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .title_school .intro p {
     width: 42.6%;
     font-family: Open Sans;
@@ -1498,19 +1514,30 @@ body.fixed-body {
     font-size: 14px;
     line-height: 32px;
     color: #808080; }
+    @media screen and (max-width: 800px) {
+      .title_school .intro p {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 12px;
+        line-height: 24px; } }
 
 .formation_school {
   position: relative;
   z-index: 1; }
   .formation_school .parallelogram_bg {
     padding: 15vh 8.3vw 17.4vh 8.3vw; }
+    @media screen and (max-width: 800px) {
+      .formation_school .parallelogram_bg {
+        padding: 41px 6.93vw 12.4vh 6.93vw;
+        -webkit-clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 99%);
+        clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 99%); } }
     .formation_school .parallelogram_bg .formations {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      margin-top: 9vh;
+      margin-top: 6vh;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; }
@@ -1526,6 +1553,12 @@ body.fixed-body {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column; }
+        @media screen and (max-width: 800px) {
+          .formation_school .parallelogram_bg .formations .formation {
+            margin-top: 9px !important;
+            padding: 21px 21px 0 21px;
+            width: 86.14vw;
+            height: 43.07vw; } }
         .formation_school .parallelogram_bg .formations .formation h4 {
           margin-bottom: 30px;
           font-family: PT Serif;
@@ -1534,6 +1567,11 @@ body.fixed-body {
           font-size: 18px;
           line-height: 23px;
           color: #03091E; }
+          @media screen and (max-width: 800px) {
+            .formation_school .parallelogram_bg .formations .formation h4 {
+              margin-bottom: 24px;
+              font-size: 12px;
+              line-height: 16px; } }
         .formation_school .parallelogram_bg .formations .formation p {
           font-family: Open Sans;
           font-style: normal;
@@ -1541,6 +1579,10 @@ body.fixed-body {
           font-size: 16px;
           line-height: 28px;
           color: #808080; }
+          @media screen and (max-width: 800px) {
+            .formation_school .parallelogram_bg .formations .formation p {
+              font-size: 12px;
+              line-height: 24px; } }
   .formation_school .school_link {
     width: 21.5vw;
     padding: 20px 0;
@@ -1556,9 +1598,18 @@ body.fixed-body {
     right: 8.3vw;
     bottom: -14px;
     z-index: 3; }
+    @media screen and (max-width: 800px) {
+      .formation_school .school_link {
+        padding: 12px 0;
+        width: 44vw;
+        font-size: 12px;
+        line-height: 16px; } }
 
 .director_school {
   padding: 22.2vh 8.3vw 8.1vh 8.3vw; }
+  @media screen and (max-width: 800px) {
+    .director_school {
+      padding: 12.2vh 6.93vw 8.1vh 6.93vw; } }
   .director_school .speech {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -1575,6 +1626,9 @@ body.fixed-body {
       content: "";
       width: 100%;
       height: 70px; }
+    @media screen and (max-width: 800px) {
+      .director_school .speech {
+        margin-top: 26px; } }
     .director_school .speech p {
       padding-bottom: 70px;
       position: absolute;
@@ -1585,6 +1639,12 @@ body.fixed-body {
       line-height: 29px;
       color: #03091E;
       width: 35.55vw; }
+      @media screen and (max-width: 800px) {
+        .director_school .speech p {
+          padding-bottom: 10px;
+          width: 86.14vw;
+          font-size: 12px;
+          line-height: 24px; } }
       .director_school .speech p:first-child:before {
         top: -35px;
         font-family: Open Sans;
@@ -1606,6 +1666,10 @@ body.fixed-body {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; }
+      @media screen and (max-width: 800px) {
+        .director_school .speech #right_director {
+          width: 86.14vw;
+          left: 0; } }
       .director_school .speech #right_director p {
         position: relative;
         width: 100%; }
@@ -1626,6 +1690,10 @@ body.fixed-body {
         line-height: 40px;
         display: grid;
         grid-template-columns: 1fr 100px; }
+        @media screen and (max-width: 800px) {
+          .director_school .speech #right_director .img {
+            font-size: 12px;
+            line-height: 24px; } }
         .director_school .speech #right_director .img span {
           padding-right: 30px;
           display: -webkit-box;
@@ -1673,6 +1741,11 @@ body.fixed-body {
 
 .ranking_school .parallelogram_bg {
   padding: 14.3vh 8.3vw 10.4vh 8.3vw; }
+  @media screen and (max-width: 800px) {
+    .ranking_school .parallelogram_bg {
+      padding: 14.3vh 6.93vw 10.4vh 6.93vw !important;
+      -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+      clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%); } }
   .ranking_school .parallelogram_bg h3 {
     margin-top: 60px;
     font-family: Open Sans;
@@ -1682,6 +1755,11 @@ body.fixed-body {
     line-height: 32px;
     text-transform: uppercase;
     color: #FFFFFF; }
+    @media screen and (max-width: 800px) {
+      .ranking_school .parallelogram_bg h3 {
+        font-size: 12px;
+        line-height: 32px;
+        margin-top: 20px; } }
   .ranking_school .parallelogram_bg .ranks {
     margin-top: 17.4vh;
     width: 100%;
@@ -1691,6 +1769,9 @@ body.fixed-body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    @media screen and (max-width: 800px) {
+      .ranking_school .parallelogram_bg .ranks {
+        margin-top: 30px; } }
     .ranking_school .parallelogram_bg .ranks .rank {
       width: 33%;
       display: -webkit-box;
@@ -1709,6 +1790,9 @@ body.fixed-body {
         font-weight: 800;
         font-size: 100px;
         color: #FFFFFF; }
+        @media screen and (max-width: 800px) {
+          .ranking_school .parallelogram_bg .ranks .rank span {
+            font-size: 50px; } }
       .ranking_school .parallelogram_bg .ranks .rank p {
         font-family: Open Sans;
         font-style: normal;
@@ -1716,6 +1800,9 @@ body.fixed-body {
         font-size: 22px;
         line-height: 28px;
         color: #FFFFFF; }
+        @media screen and (max-width: 800px) {
+          .ranking_school .parallelogram_bg .ranks .rank p {
+            font-size: 12px; } }
 
 .last .parallelogram_bg {
   padding: 14.3vh 8.3vw 35.1vh 8.3vw; }
