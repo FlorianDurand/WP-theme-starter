@@ -1,10 +1,17 @@
 .twitter_actus{
   position: relative;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 30px;
+  }
   .parallelogram_bg{
     clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
     padding: 16.2vh 8.3vw 17.7vh 8.3vw;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 800px){
+      clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+      padding: 36px 6.93vw 58px 6.93vw;
+    }
     .h2{
       width: 100%;
     }
@@ -35,5 +42,9 @@
     right: 8.3vw;
     bottom: -14px;
     z-index: 3;
+    @media screen and (max-width: 800px){
+      width: 47vw;
+      padding: 12px 0;
+    }
   }
 }

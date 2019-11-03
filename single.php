@@ -9,14 +9,18 @@ get_header(); ?>
                 <div class="date"><?php the_date( 'd/m/y'); ?></div>
 
                 <div class="tags">
-		            <?php $tags = get_tags();
-		            foreach ( $tags as $tag ) {
-			            echo $tag->{'name'} . ' ';
-		            } ?>
+	                <?php $post_id[] = get_the_ID() ?>
+                   <?php $tags = get_the_tags($post_id[0]);
+                    if ($tags) {
+                    foreach ( $tags as $tag ) { ?>
+                    <?php echo $tag->{'name'}; ?>
+                    <?php }
+                        }
+                    ?>
                 </div>
             </div>
 
-            <h2 class="h2"><?php the_title(); ?></h2>
+            <h1 class="h2"><?php the_title(); ?></h1>
         </div>
         <div class="content">
             <?php the_content(); ?>
@@ -26,15 +30,18 @@ get_header(); ?>
 	    endwhile;
 	endif;
 	?>
-    <div class="actus_actus">
+    <div class="actus_actus article">
         <h2 class="h2"><?php the_field( 'title_lasts_actu', 'option' ); ?></h2>
-        <div class="news swiper-container-actus">
+        <div class="news swiper-container-actu">
             <div class="swiper-wrapper">
 			<?php
+            $ignored = get_option( 'sticky_posts' );
+            array_push($ignored, $post_id[0]);
 			$number = get_field( 'number_of_article_lasts_actu', 'option' );
 			$new = array(
 				'post_type' => 'post',
 				'posts_per_page' => $number,
+				'post__not_in' => $ignored
 			);
 			$the_query = new WP_Query( $new );
 			if($the_query -> have_posts()): ?>

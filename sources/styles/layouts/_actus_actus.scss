@@ -1,15 +1,28 @@
 .actus_actus{
   padding: 13vh 0 13vh 8.3vw;
   width: 100%;
+  @media screen and (max-width: 800px){
+    padding: 35px 6.93vw;
+  }
     .news{
       width: 100%;
       margin-top: 6.6vh;
       display: inline-flex;
       flex-wrap: wrap;
+      @media screen and (max-width: 800px) {
+        margin-top: 30px;
+        .swiper-wrapper {
+          flex-wrap: wrap;
+        }
+      }
       .single-news{
         width: 23%;
         color: $white;
-        margin-right: 90px;
+        @media screen and (max-width: 800px){
+          margin-right: 0;
+          width: 100%;
+          margin-bottom: 18px;
+        }
         img{
           object-fit: cover;
           position: relative;
@@ -60,6 +73,9 @@
     border-radius: 0;
     background-color: #EEEFF1;
     z-index: 50;
+    @media screen and (max-width: 800px){
+      display: none;
+    }
     .swiper-scrollbar-drag{
       height: 100%;
       &:before{

@@ -1,10 +1,21 @@
 .solutions_presta{
   padding: 10.5vh 8.3vw 12.6vh 8.3vw;
+  @media screen and (max-width: 800px) {
+    padding: 5vh 6.93vw 5vh 6.93vw;
+  }
+  .swiper-container-solutions-mobile{
+    position: relative;
+  }
   .solutions{
     margin-top: 12.6vh;
     list-style: none;
     display: inline-flex;
     flex-wrap: wrap;
+    @media screen and (max-width: 800px) {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap:nowrap ;
+    }
     .solution{
       &:before{
         content: "\2022";
@@ -23,6 +34,20 @@
       font-size: 16px;
       line-height: 22px;
       color: $dark-gray;
+      @media screen and (max-width: 800px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+  .swiper-pagination{
+    display: none;
+    @media screen and (max-width: 800px) {
+      display: block;
+      bottom: 0;
+      .swiper-pagination-bullet-active{
+        background: $dark-green;
+      }
     }
   }
 }

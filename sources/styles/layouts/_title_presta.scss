@@ -1,5 +1,8 @@
 .title_presta{
   padding: 27vh 8.3vw 10vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 14vh 6.93vw 40px 6.93vw;
+  }
   .h2{
     width: 60%;
   }
@@ -12,5 +15,10 @@
     font-size: 14px;
     line-height: 32px;
     color: $dark-gray;
+    @media screen and (max-width: 800px){
+      width: 100%;
+      font-size: 12px;
+      line-height: 24px;
+    }
   }
 }

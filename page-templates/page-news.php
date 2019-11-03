@@ -4,7 +4,9 @@ get_header(); ?>
 	<?php
 	$article = array(
 		'post_type' => 'post',
-		'posts_per_page' => 1
+		'posts_per_page'      => 1,
+		'post__in'            => get_option( 'sticky_posts' ),
+		'ignore_sticky_posts' => 1,
 	);
 	$the_query = new WP_Query( $article );
 	if($the_query -> have_posts()): ?>
@@ -16,10 +18,13 @@ get_header(); ?>
         <div class="left">
             <ul>
 	        <?php
-	        $tags = get_tags();
-	        foreach ( $tags as $tag ) { ?>
-		        <li><?php echo $tag->{'name'}; ?></li>
-	     <?php } ?>
+	        $tags = get_the_tags($post_id[0]);
+            if ($tags) {
+	            foreach ( $tags as $tag ) { ?>
+                    <li><?php echo $tag->{'name'}; ?></li>
+	            <?php }
+            }
+            ?>
             </ul>
 	        <h2 class="h2"><?php the_title(); ?></h2>
             <a href="<?php the_permalink(); ?>">Lire l'article</a>
@@ -38,10 +43,12 @@ get_header(); ?>
         <div class="swiper-wrapper">
 		<?php
 		$number = get_field( 'number_of_article_lasts_actu', 'option' );
+		$ignored = get_option( 'sticky_posts' );
+		array_push($ignored, $post_id[0]);
 		$new = array(
 			'post_type' => 'post',
-			'posts_per_page' => $number,
-			'post__not_in' => $post_id
+			'posts_per_page' => -1,
+			'post__not_in' => $ignored
 		);
 		$the_query = new WP_Query( $new );
 		if($the_query -> have_posts()): ?>

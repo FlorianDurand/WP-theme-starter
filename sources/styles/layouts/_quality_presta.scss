@@ -1,10 +1,16 @@
 .quality_presta{
   padding: 13.55vh 8.3vw 13.55vh 8.3vw;
+  @media screen and (max-width: 800px){
+    padding: 30px 6.93vw 25px 6.93vw;
+  }
   .qualities{
     margin-top: 20vh;
     display: flex;
     flex-direction: column;
     width: 100%;
+    @media screen and (max-width: 800px){
+      margin-top: 54px;
+    }
     .quality{
       width: 100%;
       display: flex;
@@ -12,9 +18,17 @@
       .header{
         margin-bottom: 40px;
         display: inline-flex;
+        @media screen and (max-width: 800px){
+          margin-bottom: 18px;
+        }
         img{
           width: 10.75%;
-          height: auto;
+          object-fit: contain;
+          @media screen and (max-width: 800px){
+            height: auto;
+            width: 5.6vw;
+            position: absolute;
+          }
         }
         .right{
           display: flex;
@@ -22,6 +36,10 @@
           justify-content: center;
           margin-left: 7.08%;
           width: 52.58%;
+          @media screen and (max-width: 800px){
+            margin-left: 0;
+            width: 63.3%;
+          }
           .h3{
             font-family: $font;
             font-style: normal;
@@ -30,6 +48,12 @@
             line-height: 35px;
             color: $black;
             margin-bottom: 10px;
+            @media screen and (max-width: 800px){
+              font-size: 12px;
+              line-height: 12px;
+              margin-bottom: 24px;
+              margin-left: 10.6vw;
+            }
           }
           p{
             font-family: $font;
@@ -38,6 +62,10 @@
             font-size: 20px;
             line-height: 27px;
             color: #4F4F4F;
+            @media screen and (max-width: 800px){
+              font-size: 12px;
+              line-height: 19px;
+            }
           }
         }
       }
@@ -45,6 +73,11 @@
         margin-bottom: 8.3vh;
         display: inline-flex;
         justify-content: space-between;
+        @media screen and (max-width: 800px){
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 7vh;
+        }
         .left, .right{
           width: 42.666667%;
           font-family: $font;
@@ -53,9 +86,17 @@
           font-size: 18px;
           line-height: 32px;
           color: $dark-gray;
+          @media screen and (max-width: 800px){
+            width: 100%;
+            font-size: 12px;
+            line-height: 24px;
+          }
         }
       }
       .additional{
+        @media screen and (max-width: 800px){
+          display: none;
+        }
         width: 100%;
         .columns{
           width: 100%;
