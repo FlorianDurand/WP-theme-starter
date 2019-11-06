@@ -1,30 +1,11 @@
 {
-    "key": "group_5d8fa97a2dd77",
-    "title": "Block: Titre de page (style ecole)",
+    "key": "group_5d936befa5355",
+    "title": "Block: Discours du président de l'ASE",
     "fields": [
         {
-            "key": "field_5d8faadb452aa",
-            "label": "Titre",
-            "name": "title_school",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d8fa97a3047c",
-            "label": "Texte d'introduction gauche",
-            "name": "intro_school_left",
+            "key": "field_5d936c2ad4361",
+            "label": "Block de gauche",
+            "name": "left_block_env",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,9 +22,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_5da0513ceb542",
-            "label": "Texte d'introduction droite",
-            "name": "intro_school_right",
+            "key": "field_5d936c3dd4362",
+            "label": "Block de droite",
+            "name": "right_block_env",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -60,9 +41,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_5d8faf680fe6b",
-            "label": "Image de fond",
-            "name": "background_school",
+            "key": "field_5d936c68d4363",
+            "label": "Photo du président",
+            "name": "president_img",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -82,6 +63,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d936c8ad4364",
+            "label": "Signature du président",
+            "name": "signature_env",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Thomas BOUCHER, Président d’ASE",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -89,7 +89,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/title-school"
+                "value": "acf\/president-words"
             }
         ]
     ],
@@ -101,5 +101,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863945
+    "modified": 1572863833
 }

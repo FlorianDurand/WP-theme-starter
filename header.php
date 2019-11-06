@@ -17,6 +17,6 @@
       <div class="img">
           <img id="anim-tree" data-link="<?php the_field( 'link', 'option' );?>" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/arbre.svg" alt="">
       </div>
-      <div class="link-devis"><?php the_field( 'link_content', 'option' );?> —</div>
+      <div class="link-devis"><?php the_field( 'link_content', 'option' );?> <span>—</span></div>
   </div>
     <div class="Page">

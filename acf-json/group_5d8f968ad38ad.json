@@ -1,11 +1,11 @@
 {
-    "key": "group_5da59fa59b686",
-    "title": "Bandeau Twitter",
+    "key": "group_5d8f968ad38ad",
+    "title": "Block: Actu (HP)",
     "fields": [
         {
-            "key": "field_5da5a02d58ae5",
+            "key": "field_5d8f968ad685f",
             "label": "Titre de la section",
-            "name": "title_twitter_actus",
+            "name": "title_actu_hp",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -20,29 +20,14 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_5da5a03a58ae6",
-            "label": "link_twitter",
-            "name": "link_twitter",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "block",
                 "operator": "==",
-                "value": "page-templates\/page-news.php"
+                "value": "acf\/actu-resume"
             }
         ]
     ],
@@ -54,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863803
+    "modified": 1572863925
 }

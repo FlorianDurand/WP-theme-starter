@@ -24,6 +24,11 @@ function scrollFunction() {
     second_step = 300;
     third_step = firstContentHeight;
   }
+
+  if (  document.getElementsByClassName( 'cookies-refused' ).length === 0 || document.getElementsByClassName( 'cookies-accepted' ).length === 0 ) {
+    first_step = 258;
+  }
+
   if (document.body.scrollTop > first_step || document.documentElement.scrollTop > first_step ) {
     if ( viewport_mobile.matches ) {
       document.getElementById("header").style.top = "-120px";
@@ -31,7 +36,11 @@ function scrollFunction() {
       document.getElementById("header").style.top = "-170px";
     }
   } else {
-    document.getElementById("header").style.top = "0";
+    if ( document.getElementsByClassName( 'cookies-refused' ).length > 0 || document.getElementsByClassName( 'cookies-accepted' ).length > 0 ) {
+      document.getElementById("header").style.top = "0";
+    } else {
+      document.getElementById("header").style.top = "158px";
+    }
   }
   if (document.body.scrollTop > second_step || document.documentElement.scrollTop > second_step) {
     document.getElementById("header").classList.add("fixed");
@@ -91,6 +100,7 @@ if (viewport_mobile.matches) {
     mousewheel: {
       forceToAxis: 'true'
     },
+    speed: 20,
     freeMode: true,
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -166,7 +176,7 @@ function showMore () {
     }
   }
 }
-if ( document.getElementById( 'contact-form' ) ) {
+if ( document.getElementById( 'contact-form' ) || document.getElementsByClassName( 'actus_actus' ).length > 0 ) {
   document.getElementById( 'devis' ).style.display = 'none';
 }
 document.getElementById( 'devis' ).addEventListener( 'click', GoToDevis )
@@ -175,12 +185,18 @@ function GoToDevis () {
   let widthToReach = document.getElementsByClassName( 'link-devis' )
   let tree = document.getElementById( 'anim-tree' )
   for (i = 0; i < widthToReach.length; i++) {
-    const number = widthToReach[i].clientWidth
-    tree.style.transform = 'scale(1.5) translateX(' + number*0.6 + 'px)';
-    const link = tree.dataset.link
-    setTimeout(function(){
+    if (viewport_mobile.matches) {
+      const link = tree.dataset.link
       window.location.href=link
-    }, 500);
+    } else {
+      const number = widthToReach[i].clientWidth
+      tree.style.transform = 'scale(1.5) translateX(' + number*0.6 + 'px)';
+      const link = tree.dataset.link
+      setTimeout(function(){
+        window.location.href=link
+      }, 500);
+    }
+
   }
 }
 
@@ -200,6 +216,7 @@ function closeCookie () {
 if ( document.getElementById('swiper-container' ) ) {
   var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
+    // spaceBetween: 30,
     allowTouchMove: false,
     loop: true,
     freeMode: true,

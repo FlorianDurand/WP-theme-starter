@@ -1,11 +1,11 @@
 {
-    "key": "group_5d9103c13faa7",
-    "title": "Block: Classements de l'école",
+    "key": "group_5d8e0d655293d",
+    "title": "Block: Chiffres Clés",
     "fields": [
         {
-            "key": "field_5d9103c141db8",
+            "key": "field_5d8f945d1ad6f",
             "label": "Titre de la section",
-            "name": "title_ranking_school",
+            "name": "title_numbers_hp",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,28 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d91043ce9b21",
-            "label": "Sous titre",
-            "name": "sub_title_ranking_school",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d9103c141de0",
-            "label": "Ajouter des classements",
-            "name": "ranking_repeater",
+            "key": "field_5d8e25d3eaf1c",
+            "label": "Ajouter un chiffre clé",
+            "name": "key_repeater",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -57,13 +38,13 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "Ajouter un classement",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5d9103c143be5",
+                    "key": "field_5d8e260ceaf1d",
                     "label": "Chiffre",
-                    "name": "ranking_number",
-                    "type": "number",
+                    "name": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -76,14 +57,12 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "maxlength": ""
                 },
                 {
-                    "key": "field_5d9103c143c16",
+                    "key": "field_5d8e2619eaf1e",
                     "label": "Description",
-                    "name": "ranking_description",
+                    "name": "description",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -100,29 +79,6 @@
                     "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_5da071cb890e6",
-            "label": "Dernière section de page ?",
-            "name": "end_page",
-            "type": "checkbox",
-            "instructions": "Cocher si cette section est la dernière de la page ?",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Dernière section ?": "Dernière section ?"
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
         }
     ],
     "location": [
@@ -130,7 +86,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/ranking"
+                "value": "acf\/numbers"
             }
         ]
     ],
@@ -142,5 +98,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863933
+    "modified": 1572863929
 }

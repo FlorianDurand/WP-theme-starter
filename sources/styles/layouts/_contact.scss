@@ -2,7 +2,12 @@
   margin-top: 17.67vh;
   background-color: $orange;
   clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
-  padding: 8vh 8.3vw;
+  padding: 8vh 16.666vw;
+  @media screen and (max-width: 800px){
+    margin-top: 11vh;
+    padding:47px 6.93vw;
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+  }
   .h2contact{
     font-family: $title;
     font-style: normal;
@@ -10,42 +15,67 @@
     font-size: 28px;
     line-height: 147.8%;
     color: #0B3232;
+    @media screen and (max-width: 800px){
+      font-size: 16px;
+      line-height: 147.8%;
+    }
   }
   .fields{
     margin-top: 39px;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 800px){
+      margin-top: 20px;
+    }
     p{
-      margin-top: 18px;
+      margin-top: 5px;
       font-family: $title;
       font-style: normal;
       font-weight: bold;
       font-size: 22px;
       line-height: 147.8%;
       width: fit-content;
+      @media screen and (max-width: 800px){
+        font-size: 12px;
+        line-height: 147.8%;
+        margin-top: 8px;
+      }
       input{
-        width: 40.6vw;
+        width: 33.1vw;
         background-color: $white;
         padding: 22px;
+        @media screen and (max-width: 800px){
+          width: 100-6.93vw*2;
+          padding: 16px 12px;
+        }
       }
       .mail{
         input{
-          width: 83.33vw;
+          width: 66.6666vw;
+          @media screen and (max-width: 800px){
+            width: 100-6.93vw*2;
+          }
         }
       }
       .message{
         textarea{
           padding: 22px;
           background-color: $white;
-          max-width: 83.33vw;
-          min-width: 83.33vw;
-          width: 83.33vw;
+          max-width: 66.6666vw;
+          min-width: 66.6666vw;
+          width: 66.6666vw;
+          @media screen and (max-width: 800px){
+            width: 100-6.93vw*2;
+            max-width: 100-6.93vw*2;
+            min-width: 100-6.93vw*2;
+            padding: 16px 12px;
+          }
         }
       }
     }
     .submit-btn{
-      margin-top: 18px;
+      margin-top: 5px;
       width: 100%;
       input{
         font-family: $title;
@@ -58,6 +88,12 @@
         text-align: center;
         background-color: $dark-green;
         width: 37.6%;
+        @media screen and (max-width: 800px){
+          width: 100%;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 12px 0;
+        }
       }
     }
   }

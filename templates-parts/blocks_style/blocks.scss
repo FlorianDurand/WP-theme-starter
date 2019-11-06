@@ -1,0 +1,271 @@
+/*
+HomePage
+ */
+.parallelogram_bg{
+  h2{
+    color: white;
+  }
+}
+.presta_hp{
+  .parallelogram_bg{
+    padding: 15px 15px 50px 15px;
+    color: white;
+  }
+  .presta_link{
+    padding: 20px 0;
+    text-align: center;
+    width: 25vw;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    background: #FBAF4E;
+    position: absolute;
+    bottom: -14px;
+    z-index: 3;
+  }
+}
+.number_hp{
+  .numbers{
+    display: inline-flex;
+    .number{
+      display: inline-flex;
+      font-size: 12px;
+      line-height: 20px;
+      span{
+        margin-right: 10px;
+        color: rgba(11, 50, 50, 0.5);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+.school_hp{
+  .left {
+    margin-bottom: 30px;
+    .school_link {
+      padding: 20px 20px;
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: white;
+      background: #FBAF4E;
+      margin-bottom: 20px;
+    }
+  }
+}
+.actu_hp{
+  .parallelogram_bg{
+    padding: 15px 15px 50px 15px;
+    color: white;
+    .news{
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+      .single-news {
+        margin-top: 50px !important;
+        width: 30%;
+        .box {
+          float: right;
+          width: 100%;
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          padding: 5px;
+          background: #FBAF4E;
+          h5{
+            width: fit-content;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+          }
+          a{
+            max-height: 50px;
+            min-height: 50px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 28px;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.clients_hp{
+  .swiper-wrapper{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+      img{
+        width: 7vw;
+        height: 7vw*0.6;
+      }
+  }
+}
+
+
+/*
+Environment
+ */
+
+.president_env {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .parallelogram_bg {
+    width: 100%;
+    padding: 20px;
+    color: rgba(white,0.8);
+  }
+}
+.key_env{
+  .dates{
+    display: inline-flex;
+    flex-wrap: wrap;
+    .date{
+      width: 100%;
+      display: inline-flex;
+      align-items: flex-start;
+      .left{
+        width: 10%;
+        color: black;
+        font-weight: bold;
+      }
+      .right{
+        width: 90%;
+      }
+    }
+  }
+}
+.team_env{
+  .parallelogram_bg{
+    padding: 30px;
+    color:rgba(white,0.8)!important;
+    .members{
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .member{
+        margin-top: 10px!important;
+        width: 49%;
+      }
+    }
+  }
+}
+.rse_env{
+  .rse {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .single-rse {
+      width: 49%;
+    }
+  }
+}
+/*
+  School
+ */
+.formation_school{
+  .parallelogram_bg{
+    color: rgba(white,0.9);
+    padding: 30px;
+    .formations{
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .formation{
+        margin-top: 10px!important;
+        width: 49%;
+        h4{
+          height: 70px;
+        }
+      }
+    }
+  }
+  .school_link{
+    padding: 20px 20px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    background: #FBAF4E;
+    margin-bottom: 20px;
+  }
+}
+.director_school{
+  .img{
+    font-size: 16px;
+    line-height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    span{
+      padding-right: 30px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      grid-column: 1/2;
+    }
+    img{
+      grid-column: 2/3;
+      float: right;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  #director_link{
+    font-size: 16px;
+    line-height: 22px;
+    &:after{
+      background-position: center;
+      margin-left: 10px;
+      width: 12px;
+      height: 22px;
+      content: " ";
+      background-image: url('../../assets/images/downarrow.png');
+      background-repeat:no-repeat ;
+      background-size: contain;
+      position: absolute;
+    }
+  }
+}
+.ranking_school {
+  .parallelogram_bg {
+    padding: 30px;
+    color: rgba(white,0.9);
+    h3{
+      color: white;
+    }
+    .ranks{
+      display: inline-flex;
+      justify-content: space-between;
+      .rank{
+        width: 30%;
+        display: inline-flex;
+        font-size: 12px;
+        line-height: 20px;
+        span{
+          margin-right: 10px;
+          color: white;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 30px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}

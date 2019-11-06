@@ -16,7 +16,7 @@ $title = get_field( 'title_numbers_hp' ) ?: 'Titre de la section...' ; ?>
                 ?>
                 <div class="number" >
 	                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="<?php echo $time; ?>" data-aos-once="true"><?php the_sub_field( 'number' ); ?></span>
-	                <div class="none" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="<?php echo $time_1; ?>" data-aos-once="true"><?php the_sub_field( 'description' ); ?></div>
+	                <div class="none" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="<?php echo $time; ?>" data-aos-once="true"><?php the_sub_field( 'description' ); ?></div>
                 </div>
             <?php
             $i++;

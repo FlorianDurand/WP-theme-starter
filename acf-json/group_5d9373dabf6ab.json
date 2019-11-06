@@ -1,11 +1,11 @@
 {
-    "key": "group_5d8e2aa3830bc",
-    "title": "Block: Presta (HP)",
+    "key": "group_5d9373dabf6ab",
+    "title": "Block: Rôle",
     "fields": [
         {
-            "key": "field_5d8f94e2951f1",
-            "label": "Titre de la section",
-            "name": "title_presta_hp",
+            "key": "field_5d9373fce2962",
+            "label": "Rôle du membre",
+            "name": "role",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,11 +22,11 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d9db5f20cfa8",
-            "label": "Nombre de prestation affichés",
-            "name": "number_presta",
-            "type": "number",
-            "instructions": "",
+            "key": "field_5d9b4dc9f041c",
+            "label": "Diplome du membre \/ Métier",
+            "name": "degree_member",
+            "type": "text",
+            "instructions": "Laisser vide pour un membre du Mandat (utile que pour COS)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -38,24 +38,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5d8e2ae047a8b",
-            "label": "Liens du bouton \"Toutes les solutions\"",
-            "name": "link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
+            "maxlength": ""
         }
     ],
     "location": [
@@ -63,7 +46,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/presation-resume"
+                "value": "acf\/role-team"
             }
         ]
     ],
@@ -75,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863904
+    "modified": 1572863908
 }

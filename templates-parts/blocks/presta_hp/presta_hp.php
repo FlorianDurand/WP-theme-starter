@@ -11,7 +11,6 @@ $number_presta = get_field ( 'number_presta' );
 $new = array(
 	'post_type' => 'presta',
 	'posts_per_page' => $number_presta,
-    'order' => 'ASC'
 );
 $the_query = new WP_Query( $new );
 
@@ -19,8 +18,8 @@ if($the_query -> have_posts()): ?>
 <?php while($the_query -> have_posts()): ?>
 <?php $the_query -> the_post(); ?>
     <div class="single-presta swiper-slide">
-		<?php the_post_thumbnail( 'icon_presta' ); ?> <br>
-	    <h4 class="h4"><?php the_title(); ?></h4> <br>
+		<?php the_post_thumbnail( 'icon_presta' ); ?>
+	    <h4 class="h4"><?php the_title(); ?></h4>
 	    <?php the_excerpt(); ?>
     </div>
 <?php endwhile;?>

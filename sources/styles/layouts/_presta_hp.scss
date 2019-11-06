@@ -31,8 +31,9 @@
           line-height: 22px;
           font-family: $font;
           color: $white;
-
+          margin-bottom: 24px;
           @media screen and (max-width: 800px) {
+            margin-bottom: 11px;
             font-size: 14px;
             line-height: 19px;
           }

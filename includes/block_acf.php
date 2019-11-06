@@ -1,4 +1,9 @@
 <?php
+
+add_action('enqueue_block_editor_assets','add_block_editor_assets',10,0);
+function add_block_editor_assets(){
+	wp_enqueue_style('block_editor_css', get_template_directory_uri() . '/templates-parts/blocks_style/blocks.css');
+}
 function register_acf_block_types() {
 
 	/*

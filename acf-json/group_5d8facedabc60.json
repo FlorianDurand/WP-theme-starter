@@ -1,11 +1,11 @@
 {
-    "key": "group_5d8fa97a2dd77",
-    "title": "Block: Titre de page (style ecole)",
+    "key": "group_5d8facedabc60",
+    "title": "Block: Présentation école (style ecole)",
     "fields": [
         {
-            "key": "field_5d8faadb452aa",
+            "key": "field_5d8facedae2ba",
             "label": "Titre",
-            "name": "title_school",
+            "name": "title_presentation_school",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d8fa97a3047c",
-            "label": "Texte d'introduction gauche",
-            "name": "intro_school_left",
+            "key": "field_5d8facedae2ec",
+            "label": "Block de gauche de présentation",
+            "name": "presentation_school_1",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,9 +41,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_5da0513ceb542",
-            "label": "Texte d'introduction droite",
-            "name": "intro_school_right",
+            "key": "field_5d8fad4aff6b4",
+            "label": "Block de droite de présentation",
+            "name": "presentation_school_2",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -58,30 +58,6 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_5d8faf680fe6b",
-            "label": "Image de fond",
-            "name": "background_school",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         }
     ],
     "location": [
@@ -89,7 +65,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/title-school"
+                "value": "acf\/presentation-school"
             }
         ]
     ],
@@ -101,5 +77,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863945
+    "modified": 1572863894
 }

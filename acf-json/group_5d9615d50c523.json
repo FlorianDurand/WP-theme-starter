@@ -1,11 +1,11 @@
 {
-    "key": "group_5d8fa97a2dd77",
-    "title": "Block: Titre de page (style ecole)",
+    "key": "group_5d9615d50c523",
+    "title": "Block: Mots clients",
     "fields": [
         {
-            "key": "field_5d8faadb452aa",
-            "label": "Titre",
-            "name": "title_school",
+            "key": "field_5d9615d50ffa3",
+            "label": "Titre de la section",
+            "name": "title_client_presta",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d8fa97a3047c",
-            "label": "Texte d'introduction gauche",
-            "name": "intro_school_left",
+            "key": "field_5d9615d50ffe9",
+            "label": "Texte de description",
+            "name": "description_client_presta",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,28 +41,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_5da0513ceb542",
-            "label": "Texte d'introduction droite",
-            "name": "intro_school_right",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_5d8faf680fe6b",
-            "label": "Image de fond",
-            "name": "background_school",
+            "key": "field_5d9615d51003a",
+            "label": "Logo du client",
+            "name": "picture_client_presta",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -89,7 +70,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/title-school"
+                "value": "acf\/client-words-presta"
             }
         ]
     ],
@@ -101,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863945
+    "modified": 1572863864
 }

@@ -1,0 +1,258 @@
+/*
+HomePage
+ */
+.parallelogram_bg h2 {
+  color: white;
+}
+
+.presta_hp .parallelogram_bg {
+  padding: 15px 15px 50px 15px;
+  color: white;
+}
+.presta_hp .presta_link {
+  padding: 20px 0;
+  text-align: center;
+  width: 25vw;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  background: #FBAF4E;
+  position: absolute;
+  bottom: -14px;
+  z-index: 3;
+}
+
+.number_hp .numbers {
+  display: inline-flex;
+}
+.number_hp .numbers .number {
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 20px;
+}
+.number_hp .numbers .number span {
+  margin-right: 10px;
+  color: rgba(11, 50, 50, 0.5);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.school_hp .left {
+  margin-bottom: 30px;
+}
+.school_hp .left .school_link {
+  padding: 20px 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  background: #FBAF4E;
+  margin-bottom: 20px;
+}
+
+.actu_hp .parallelogram_bg {
+  padding: 15px 15px 50px 15px;
+  color: white;
+}
+.actu_hp .parallelogram_bg .news {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.actu_hp .parallelogram_bg .news .single-news {
+  margin-top: 50px !important;
+  width: 30%;
+}
+.actu_hp .parallelogram_bg .news .single-news .box {
+  float: right;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 5px;
+  background: #FBAF4E;
+}
+.actu_hp .parallelogram_bg .news .single-news .box h5 {
+  width: fit-content;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+.actu_hp .parallelogram_bg .news .single-news .box a {
+  max-height: 50px;
+  min-height: 50px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 28px;
+  color: white;
+  text-decoration: none;
+}
+
+.clients_hp .swiper-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.clients_hp .swiper-wrapper img {
+  width: 7vw;
+  height: 4.2vw;
+}
+
+/*
+Environment
+ */
+.president_env {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.president_env .parallelogram_bg {
+  width: 100%;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.key_env .dates {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.key_env .dates .date {
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-start;
+}
+.key_env .dates .date .left {
+  width: 10%;
+  color: black;
+  font-weight: bold;
+}
+.key_env .dates .date .right {
+  width: 90%;
+}
+
+.team_env .parallelogram_bg {
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.team_env .parallelogram_bg .members {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.team_env .parallelogram_bg .members .member {
+  margin-top: 10px !important;
+  width: 49%;
+}
+
+.rse_env .rse {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rse_env .rse .single-rse {
+  width: 49%;
+}
+
+/*
+  School
+ */
+.formation_school .parallelogram_bg {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+}
+.formation_school .parallelogram_bg .formations {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.formation_school .parallelogram_bg .formations .formation {
+  margin-top: 10px !important;
+  width: 49%;
+}
+.formation_school .parallelogram_bg .formations .formation h4 {
+  height: 70px;
+}
+.formation_school .school_link {
+  padding: 20px 20px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  background: #FBAF4E;
+  margin-bottom: 20px;
+}
+
+.director_school .img {
+  font-size: 16px;
+  line-height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+.director_school .img span {
+  padding-right: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  grid-column: 1/2;
+}
+.director_school .img img {
+  grid-column: 2/3;
+  float: right;
+  width: 100px;
+  height: 100px;
+}
+.director_school #director_link {
+  font-size: 16px;
+  line-height: 22px;
+}
+.director_school #director_link:after {
+  background-position: center;
+  margin-left: 10px;
+  width: 12px;
+  height: 22px;
+  content: " ";
+  background-image: url("../../assets/images/downarrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.ranking_school .parallelogram_bg {
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.ranking_school .parallelogram_bg h3 {
+  color: white;
+}
+.ranking_school .parallelogram_bg .ranks {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.ranking_school .parallelogram_bg .ranks .rank {
+  width: 30%;
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 20px;
+}
+.ranking_school .parallelogram_bg .ranks .rank span {
+  margin-right: 10px;
+  color: white;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+/*# sourceMappingURL=blocks.css.map */

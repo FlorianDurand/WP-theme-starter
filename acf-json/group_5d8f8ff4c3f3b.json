@@ -1,11 +1,11 @@
 {
-    "key": "group_5d8fa97a2dd77",
-    "title": "Block: Titre de page (style ecole)",
+    "key": "group_5d8f8ff4c3f3b",
+    "title": "Block: Présentation de l'école HP",
     "fields": [
         {
-            "key": "field_5d8faadb452aa",
-            "label": "Titre",
-            "name": "title_school",
+            "key": "field_5d8f902a48874",
+            "label": "Nom de l'école",
+            "name": "title_school_hp",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +22,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d8fa97a3047c",
-            "label": "Texte d'introduction gauche",
-            "name": "intro_school_left",
+            "key": "field_5d8f90a248875",
+            "label": "Texte de description",
+            "name": "description_school_hp",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,10 +41,10 @@
             "new_lines": ""
         },
         {
-            "key": "field_5da0513ceb542",
-            "label": "Texte d'introduction droite",
-            "name": "intro_school_right",
-            "type": "textarea",
+            "key": "field_5d8f90c448876",
+            "label": "Lien vers page de l'école",
+            "name": "link_school_hp",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,16 +53,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "return_format": "array"
         },
         {
-            "key": "field_5d8faf680fe6b",
-            "label": "Image de fond",
-            "name": "background_school",
+            "key": "field_5d8f911548877",
+            "label": "Photo de présentation",
+            "name": "picture_school_hp",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -89,7 +85,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/title-school"
+                "value": "acf\/school"
             }
         ]
     ],
@@ -101,5 +97,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863945
+    "modified": 1572863885
 }
