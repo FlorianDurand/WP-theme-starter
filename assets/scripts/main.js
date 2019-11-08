@@ -1,8 +1,46 @@
+if ( document.getElementsByClassName( "prestas" ).length > 0 ) {
+  var i, tabHeight, maxHeight, titlePresta;
+  titlePresta = document.getElementsByClassName("single_presta_title");
+  for (i = 0; i < titlePresta.length; i++) {
+    titlePresta[i].addEventListener("click", showPresta);
+  }
+  tabHeight = document.getElementsByClassName("single_presta_content");
+  maxHeight = 0;
+  for (i = 0; i < tabHeight.length; i++) {
+    if (maxHeight < tabHeight[i].clientHeight) {
+      maxHeight = tabHeight[i].clientHeight
+    }
+  }
+  document.getElementById('prestas_content').style.height = maxHeight + 'px';
+
+  function showPresta () {
+    let i;
+    for (i = 0; i < titlePresta.length; i++) {
+      let current_title = document.getElementsByClassName("title_active");
+      let current_content = document.getElementsByClassName("single_presta_content");
+      current_title[0].className = current_title[0].className.replace("title_active", "");
+      this.className += " title_active";
+      const target = this.dataset.parent;
+      current_content[i].classList.remove('content_active');
+      setTimeout(function () {
+        wait(target);
+      }, 400);
+    }
+
+    function wait (target) {
+      document.getElementById(target).classList.add('content_active');
+    }
+  }
+}
+
 var viewport_mobile = window.matchMedia("(max-width: 800px)")
 
 window.onscroll = function() {scrollFunction()};
 
-
+if ( document.getElementById( 'cn-accept-cookie' ) ) {
+  document.getElementById('cn-accept-cookie').addEventListener('click', closeCookie)
+  document.getElementById('cn-refuse-cookie').addEventListener('click', closeCookie)
+}
 function scrollFunction() {
   const firstContent = document.getElementsByClassName( 'first-element' )
   let firstContentHeight = 0
@@ -51,8 +89,6 @@ function scrollFunction() {
     document.getElementById("header").style.top = "0";
   }
 }
-
-
 
 
 
@@ -190,11 +226,19 @@ function GoToDevis () {
       window.location.href=link
     } else {
       const number = widthToReach[i].clientWidth
-      tree.style.transform = 'scale(1.5) translateX(' + number*0.6 + 'px)';
+      tree.style.transform = 'scale(1.1) translateX(' + number + 'px)';
+      tree.style.transition = 'transform 0.6s ease-in';
+      widthToReach[i].classList.add( 'before' )
+     setTimeout(function(){
+      let widthToReach = document.getElementsByClassName( 'link-devis' )
+       for (i = 0; i < widthToReach.length; i++) {
+         widthToReach[i].classList.add('after')
+       }
+      }, 300);
       const link = tree.dataset.link
       setTimeout(function(){
         window.location.href=link
-      }, 500);
+      }, 800);
     }
 
   }
@@ -216,14 +260,13 @@ function closeCookie () {
 if ( document.getElementById('swiper-container' ) ) {
   var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
-    // spaceBetween: 30,
     allowTouchMove: false,
     loop: true,
     freeMode: true,
     autoplay: {
-      delay: 1,
+      delay: 3000,
     },
-    speed: 2000,
+    speed: 800,
   })
   document.getElementById('swiper-container').addEventListener('mouseenter', stop)
 

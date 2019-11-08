@@ -219,6 +219,65 @@ body.fixed-body {
   height: 100%;
   position: fixed; }
 
+.button-style > a:hover:after {
+  width: 120% !important;
+  -webkit-transform-origin: left !important;
+  transform-origin: left !important; }
+
+.button-style > a:after {
+  -webkit-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
+  position: absolute;
+  content: '';
+  left: unset !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 0 !important;
+  height: 120% !important;
+  background-color: #0B3232 !important;
+  -webkit-transform-origin: left !important;
+  transform-origin: left !important;
+  -webkit-transition: width 0.8s ease !important;
+  transition: width 0.8s ease !important;
+  z-index: -2 !important;
+  -webkit-clip-path: polygon(0 9%, 100% 9%, 100% 100%, 9% 100%) !important;
+  clip-path: polygon(0 9%, 100% 9%, 100% 100%, 9% 100%) !important; }
+
+.button-style > a, a.button-style {
+  position: relative;
+  overflow: hidden;
+  background: none !important; }
+  .button-style > a:hover:after, a.button-style:hover:after {
+    width: 120%; }
+  .button-style > a:before, a.button-style:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FBAF4E;
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    -webkit-transition: width 0.25s ease;
+    transition: width 0.25s ease;
+    z-index: -2; }
+  .button-style > a:after, a.button-style:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 120%;
+    background-color: #0B3232;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: width 0.8s ease;
+    transition: width 0.8s ease;
+    z-index: -2;
+    -webkit-clip-path: polygon(0 9%, 100% 9%, 100% 100%, 9% 100%);
+    clip-path: polygon(0 9%, 100% 9%, 100% 100%, 9% 100%); }
+
 #devis {
   z-index: 5000;
   top: 70%;
@@ -230,6 +289,12 @@ body.fixed-body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  #devis:hover .img img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  #devis:hover .link-devis {
+    -webkit-transform: translateX(10px) scale(1.1);
+    transform: translateX(10px) scale(1.1); }
   @media screen and (max-width: 800px) {
     #devis {
       top: 100vw;
@@ -239,10 +304,10 @@ body.fixed-body {
     z-index: 4999;
     position: absolute; }
     #devis .img img {
-      -webkit-transition: -webkit-transform 0.5s;
-      transition: -webkit-transform 0.5s;
-      transition: transform 0.5s;
-      transition: transform 0.5s, -webkit-transform 0.5s; }
+      -webkit-transition: -webkit-transform 0.3s ease-in;
+      transition: -webkit-transform 0.3s ease-in;
+      transition: transform 0.3s ease-in;
+      transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in; }
       @media screen and (max-width: 800px) {
         #devis .img img {
           width: 42px;
@@ -255,6 +320,16 @@ body.fixed-body {
       #devis .img {
         z-index: 47; } }
   #devis .link-devis {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     cursor: pointer;
     margin-left: 30px;
     z-index: 5000;
@@ -265,6 +340,26 @@ body.fixed-body {
     line-height: 32px;
     letter-spacing: 0.05em;
     text-transform: uppercase; }
+    #devis .link-devis:before {
+      content: ' ';
+      width: 16px;
+      background: #03091E;
+      display: block;
+      height: 2px;
+      margin-right: 5px;
+      -webkit-transition: width 0.3s ease-in;
+      transition: width 0.3s ease-in; }
+    #devis .link-devis:after {
+      content: ' ';
+      width: 0;
+      background: #03091E;
+      display: block;
+      height: 2px;
+      margin-left: 5px;
+      -webkit-transition: width 0.3s ease-out;
+      transition: width 0.3s ease-out; }
+    #devis .link-devis span {
+      display: none; }
     @media screen and (max-width: 800px) {
       #devis .link-devis {
         text-align: center;
@@ -273,6 +368,10 @@ body.fixed-body {
         line-height: 15px; }
         #devis .link-devis span {
           display: none; } }
+  #devis .link-devis.before:before {
+    width: 0; }
+  #devis .link-devis.after:after {
+    width: 16px; }
 
 .h2 {
   font-style: normal;
@@ -1077,11 +1176,15 @@ body.fixed-body {
                 font-size: 12px;
                 line-height: 16px; } }
           .actu_hp .parallelogram_bg .news .single-news .box a {
+            -webkit-transition: color 0.4s;
+            transition: color 0.4s;
             font-family: Open Sans;
             font-style: normal;
             font-weight: 600;
             font-size: 12px;
             line-height: 28px; }
+            .actu_hp .parallelogram_bg .news .single-news .box a:hover {
+              color: #0B3232; }
             @media screen and (max-width: 800px) {
               .actu_hp .parallelogram_bg .news .single-news .box a {
                 font-size: 12px;
@@ -1100,8 +1203,18 @@ body.fixed-body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-transition-timing-function: linear !important;
-    transition-timing-function: linear !important; }
+    -webkit-transition-timing-function: ease-in-out !important;
+    transition-timing-function: ease-in-out !important; }
+    .clients_hp .swiper-wrapper .swiper-slide, .partenaire_presta .swiper-wrapper .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
     @media screen and (max-width: 800px) {
       .clients_hp .swiper-wrapper img, .partenaire_presta .swiper-wrapper img {
         width: 17vw;
@@ -1749,7 +1862,9 @@ body.fixed-body {
         font-weight: bold;
         font-size: 16px;
         line-height: 40px;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 100px;
         grid-template-columns: 1fr 100px; }
         @media screen and (max-width: 800px) {
           .director_school .speech #right_director .img {
@@ -1766,8 +1881,12 @@ body.fixed-body {
           -webkit-box-pack: end;
           -ms-flex-pack: end;
           justify-content: flex-end;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
           grid-column: 1/2; }
         .director_school .speech #right_director .img img {
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
           grid-column: 2/3;
           float: right;
           width: 100px;
@@ -2240,12 +2359,11 @@ body.fixed-body {
           object-fit: contain; } }
 
 .quality_presta {
-  padding: 13.55vh 8.3vw 13.55vh 8.3vw; }
+  padding: 13.55vh 8.3vw 5.5vh 8.3vw; }
   @media screen and (max-width: 800px) {
     .quality_presta {
       padding: 30px 6.93vw 25px 6.93vw; } }
   .quality_presta .qualities {
-    margin-top: 20vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2258,6 +2376,7 @@ body.fixed-body {
       .quality_presta .qualities {
         margin-top: 54px; } }
     .quality_presta .qualities .quality {
+      margin-top: 11vh;
       width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2304,8 +2423,8 @@ body.fixed-body {
             font-family: Open Sans;
             font-style: normal;
             font-weight: bold;
-            font-size: 26px;
-            line-height: 35px;
+            font-size: 22px;
+            line-height: 30px;
             color: #03091E;
             margin-bottom: 10px; }
             @media screen and (max-width: 800px) {
@@ -2318,8 +2437,8 @@ body.fixed-body {
             font-family: Open Sans;
             font-style: normal;
             font-weight: 300;
-            font-size: 20px;
-            line-height: 27px;
+            font-size: 16px;
+            line-height: 22px;
             color: #4F4F4F; }
             @media screen and (max-width: 800px) {
               .quality_presta .qualities .quality .header .right p {
@@ -2348,7 +2467,7 @@ body.fixed-body {
           font-family: Open Sans;
           font-style: normal;
           font-weight: 300;
-          font-size: 18px;
+          font-size: 16px;
           line-height: 32px;
           color: #808080; }
           @media screen and (max-width: 800px) {
@@ -2377,8 +2496,8 @@ body.fixed-body {
               font-family: Open Sans;
               font-style: normal;
               font-weight: bold;
-              font-size: 20px;
-              line-height: 27px;
+              font-size: 18px;
+              line-height: 25px;
               color: #03091E; }
             .quality_presta .qualities .quality .additional .columns .column p {
               margin-top: 44px;
@@ -2386,13 +2505,15 @@ body.fixed-body {
               font-family: Open Sans;
               font-style: normal;
               font-weight: 300;
-              font-size: 16px;
-              line-height: 32px;
+              font-size: 14px;
+              line-height: 28px;
               color: #808080; }
 
-@media screen and (max-width: 800px) {
-  .partenaire_presta {
-    display: none; } }
+.partenaire_presta {
+  padding-top: 0vh; }
+  @media screen and (max-width: 800px) {
+    .partenaire_presta {
+      display: none; } }
 
 .twitter_actus {
   position: relative; }
@@ -2512,16 +2633,22 @@ body.fixed-body {
           line-height: 18px;
           height: 36px; }
         .actus_actus .news .single-news .box a {
+          -webkit-transition: color 0.4s;
+          transition: color 0.4s;
           font-family: Open Sans;
           font-style: normal;
           font-weight: 600;
           font-size: 12px;
           line-height: 28px; }
+          .actus_actus .news .single-news .box a:hover {
+            color: #FBAF4E; }
   .actus_actus .swiper-scrollbar {
     margin-right: 8.3vw;
     margin-top: 50px;
     position: relative;
     opacity: 1 !important;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
     grid-column: 2/12;
     height: 6px;
     width: 100%;
@@ -2623,12 +2750,16 @@ body.fixed-body {
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
-      line-height: 28px; }
+      line-height: 28px;
+      -webkit-transition: color 0.4s;
+      transition: color 0.4s; }
       @media screen and (max-width: 800px) {
         .last_actu .left a {
           margin-top: 12px;
           line-height: 12px;
           font-size: 12px; } }
+      .last_actu .left a:hover {
+        color: #0B3232; }
   .last_actu img {
     width: 51.9vw;
     height: 40.72593vw;
@@ -2717,8 +2848,32 @@ body.fixed-body {
       content: '';
       margin-right: 0; }
     .single-article .content a {
+      position: relative;
       color: #FBAF4E;
       font-weight: 600; }
+      .single-article .content a:after {
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #FBAF4E;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: -webkit-transform 350ms ease-in-out;
+        transition: -webkit-transform 350ms ease-in-out;
+        transition: transform 350ms ease-in-out;
+        transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%; }
+      .single-article .content a:hover:after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%; }
     @media screen and (max-width: 800px) {
       .single-article .content {
         font-size: 12px;
@@ -2878,6 +3033,7 @@ body.fixed-body {
       margin-top: 5px;
       width: 100%; }
       .form-contact .fields .submit-btn input {
+        cursor: pointer;
         font-family: PT Serif;
         font-style: normal;
         font-weight: normal;
@@ -2886,7 +3042,7 @@ body.fixed-body {
         color: #FFFFFF;
         float: right;
         text-align: center;
-        background-color: #0B3232;
+        background-color: #0B3232 !important;
         width: 37.6%; }
         @media screen and (max-width: 800px) {
           .form-contact .fields .submit-btn input {

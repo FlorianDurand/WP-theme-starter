@@ -8,9 +8,14 @@
     margin-top: 15vh;
     display: flex;
     align-items: center;
-    -webkit-transition-timing-function:linear!important;
-    -o-transition-timing-function:linear!important;
-    transition-timing-function:linear!important;
+    -webkit-transition-timing-function:ease-in-out!important;
+    -o-transition-timing-function:ease-in-out!important;
+    transition-timing-function:ease-in-out!important;
+    .swiper-slide{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     @media screen and (max-width: 800px) {
       img{
         width: 17vw;

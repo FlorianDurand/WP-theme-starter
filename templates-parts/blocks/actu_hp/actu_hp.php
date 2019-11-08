@@ -5,11 +5,10 @@ $title = get_field( 'title_actu_hp' ) ?: 'Titre de la section...' ; ?>
 <h2 class="h2"><?php echo $title ?></h2>
     <div class="news">
         <?php
-        $ignored = get_option( 'sticky_posts' );
         $new = array(
+            'ignore_sticky_posts' => 1,
             'post_type' => 'post',
             'posts_per_page' => 3,
-            'post__not_in' => $ignored
         );
         $the_query = new WP_Query( $new );
         $i = 0;

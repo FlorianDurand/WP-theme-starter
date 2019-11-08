@@ -57,6 +57,10 @@
             }
           }
           a{
+            &:hover{
+              color: $dark-green;
+            }
+            transition: color 0.4s;
             font-family: $font;
             font-style: normal;
             font-weight: 600;

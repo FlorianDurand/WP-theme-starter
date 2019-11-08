@@ -64,10 +64,14 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 28px;
+      transition: color 0.4s;
       @media screen and (max-width: 800px){
         margin-top: 12px;
         line-height: 12px;
         font-size: 12px;
+      }
+      &:hover{
+        color: $dark-green;
       }
     }
   }

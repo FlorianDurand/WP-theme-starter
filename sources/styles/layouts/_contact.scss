@@ -78,6 +78,7 @@
       margin-top: 5px;
       width: 100%;
       input{
+        cursor: pointer;
         font-family: $title;
         font-style: normal;
         font-weight: normal;
@@ -86,7 +87,7 @@
         color: $white;
         float: right;
         text-align: center;
-        background-color: $dark-green;
+        background-color: $dark-green !important;
         width: 37.6%;
         @media screen and (max-width: 800px){
           width: 100%;

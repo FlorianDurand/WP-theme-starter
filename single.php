@@ -6,8 +6,8 @@ get_header(); ?>
         the_post(); ?>
         <div class="first">
             <div class="top">
-                <div class="date"><?php the_date( 'd/m/y'); ?></div>
-
+                <?php $date = get_the_date( 'd/m/y' ); ?>
+                <time datetime="<?php the_date( 'd-m-y'); ?>" class="date"><?php echo $date ?></time>
                 <div class="tags">
 	                <?php $post_id[] = get_the_ID() ?>
                    <?php $tags = get_the_tags($post_id[0]);
