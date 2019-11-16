@@ -41,9 +41,49 @@
             "button_label": "",
             "sub_fields": [
                 {
+                    "key": "field_5dce8c03ce8bb",
+                    "label": "Prefixe du nombre",
+                    "name": "prefixe",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5d8e260ceaf1d",
                     "label": "Chiffre",
                     "name": "number",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5dce8c1dce8bc",
+                    "label": "Suffixe",
+                    "name": "suffixe",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -98,5 +138,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572863929
+    "modified": 1573817503
 }

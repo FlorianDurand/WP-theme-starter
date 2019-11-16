@@ -7,9 +7,4 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-	acf_add_options_sub_page(array(
-		'page_title'    => 'Google Analytics',
-		'menu_title'    => 'Google Analytics',
-		'parent_slug'   => 'theme-general-settings',
-	));
 }

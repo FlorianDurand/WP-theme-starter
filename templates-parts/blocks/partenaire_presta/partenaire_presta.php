@@ -14,7 +14,7 @@ if($the_query -> have_posts()): ?>
 <?php while($the_query -> have_posts()): ?>
 <?php $the_query -> the_post(); ?>
         <div class="swiper-slide">
-	<?php the_post_thumbnail(); ?>
+	<?php the_post_thumbnail('presta_presta'); ?>
         </div>
 <?php endwhile;?>
 <?php endif;

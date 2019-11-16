@@ -6,8 +6,28 @@ body.fixed-body{
   height: 100%;
   position: fixed;
 }
-
-
+body.cookies-accepted{
+  #overlay-loader {
+    display: none;
+  }
+}
+body.set {
+  #overlay-loader {
+    transition: opacity 0.4s ease-in;
+    opacity: 1;
+    top: 0;
+    z-index: 5501;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $orange;
+  }
+}
+body.loaded{
+  #overlay-loader{
+    opacity: 0;
+  }
+}
 
 .button-style > a {
   &:hover{
@@ -71,18 +91,15 @@ body.fixed-body{
   &:hover{
     .img{
       img{
-        transform: scale(1.2);
+        transform: scale(1);
       }
     }
     .link-devis{
-      //&:after{
-      //  width: 16px;
-      //}
       transform:translateX(10px) scale(1.1);
     }
   }
   z-index:5000;
-  top: 70%;
+  top: 65%;
   right: 8.3vw;
   position: fixed;
   display: flex;
@@ -94,6 +111,7 @@ body.fixed-body{
   }
   .img{
     img{
+      transform: scale(0.9);
       transition: transform 0.3s ease-in;
       @media screen and (max-width: 800px) {
         width: 42px;
@@ -185,6 +203,7 @@ body.fixed-body{
   }
 }
 #cookie-notice{
+  z-index: 5500;
   .cookie-notice-revoke-container{
     width: 50%;
   }

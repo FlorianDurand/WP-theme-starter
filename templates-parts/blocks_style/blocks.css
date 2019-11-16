@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 HomePage
  */
@@ -32,13 +33,19 @@ HomePage
   font-size: 12px;
   line-height: 20px;
 }
-.number_hp .numbers .number span {
+.number_hp .numbers .number .group {
   margin-right: 10px;
   color: rgba(11, 50, 50, 0.5);
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
   line-height: 32px;
+}
+
+.end_picture {
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .school_hp .left {
@@ -253,6 +260,207 @@ Environment
   font-weight: 800;
   font-size: 30px;
   line-height: 32px;
+}
+
+.presta_presta .parallelogram_bg {
+  padding: 30px;
+}
+.presta_presta .parallelogram_bg .prestas {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile {
+  width: 25%;
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title {
+  transition: 0.2s all;
+  cursor: pointer;
+  display: inline-flex;
+  margin-bottom: 13.4vh;
+  align-items: flex-end;
+  position: relative;
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title span {
+  transition: 0.2s all;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 100px;
+  position: absolute;
+  color: rgba(156, 156, 156, 0.09);
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title .h3 {
+  transition: 0.2s all;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  color: rgba(156, 156, 156, 0.49);
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title.title_active .h3, .presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title:hover .h3 {
+  color: white;
+}
+.presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title.title_active span, .presta_presta .parallelogram_bg .prestas .swiper-container-presta-mobile .prestas_title .single_presta_title:hover span {
+  color: rgba(232, 232, 232, 0.35);
+}
+.presta_presta .parallelogram_bg .prestas .prestas_content {
+  width: 42.4%;
+  position: relative;
+}
+.presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content {
+  transition: all ease-out 0.35s;
+  transform: translateY(100px);
+  opacity: 0;
+  position: absolute;
+}
+.presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content .h3mobile {
+  display: none;
+}
+.presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h2, .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h3, .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h4, .presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content h5 {
+  width: 50%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 45px;
+  color: white;
+}
+.presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content p {
+  margin-bottom: 11vh;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+}
+.presta_presta .parallelogram_bg .prestas .prestas_content .single_presta_content.content_active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.solutions_presta {
+  padding: 30px;
+}
+.solutions_presta .solutions {
+  list-style: none !important;
+  display: flex;
+  flex-direction: column;
+}
+.solutions_presta .solutions .solution:before {
+  content: "•";
+  color: #FBAF4E;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.etude_steps .parallelogram_bg {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+}
+.etude_steps .parallelogram_bg .steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.etude_steps .parallelogram_bg .steps .step {
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.889vh;
+  height: 204px;
+}
+.etude_steps .parallelogram_bg .steps .step .left {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #03091E;
+  text-align: center;
+  width: 32%;
+}
+.etude_steps .parallelogram_bg .steps .step .right {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #808080;
+}
+.etude_steps .parallelogram_bg .steps .step .right p {
+  margin-bottom: 0;
+  color: #808080;
+}
+
+.client_presta .parallelogram_bg {
+  padding: 30px;
+}
+.client_presta .parallelogram_bg .before:before {
+  content: "“";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 35px;
+  color: white;
+}
+.client_presta .parallelogram_bg p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 9.3vh;
+}
+
+.quality_presta {
+  padding: 4px;
+}
+.quality_presta .header {
+  margin-bottom: 40px;
+  display: inline-flex;
+}
+.quality_presta .header img {
+  width: 5vw;
+  object-fit: contain;
+}
+.quality_presta .header .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7.08%;
+  width: 52.58%;
+}
+.quality_presta .header .right .h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  color: #03091E;
+  margin-bottom: 10px;
+}
+.quality_presta .header .right p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4F4F4F;
+}
+
+.custom {
+  background-color: #0B3232;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.9);
+  clip-path: polygon(0 0, 100% 9%, 100% 100%, 0 91%);
 }
 
 /*# sourceMappingURL=blocks.css.map */

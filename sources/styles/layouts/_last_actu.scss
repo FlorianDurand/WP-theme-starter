@@ -48,6 +48,8 @@
     width: 40.722vw;
     background-color: $orange;
     .h2{
+      text-transform: none;
+      font-family: $title;
       margin-top: 20px;
       color: $white;
       width: 100%;

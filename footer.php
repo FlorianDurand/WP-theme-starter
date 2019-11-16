@@ -63,7 +63,8 @@
                 <a class="privacy_link" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
 	        <?php endif; ?>
         </div>
-        <div class="tree">
+        <div class="tree" data-aos="zoom-in-up" data-aos-duration="1000">
+<!--        <div class="tree">-->
 	        <?php
 	        $footer_tree =  get_field( 'tree_logo', 'option' );
 	        $size = 'full';
@@ -78,6 +79,16 @@
     <script>
       AOS.init();
     </script>
-	    <?php wp_footer(); ?>
+    <?php wp_footer(); ?>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie_html.min.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById('overlay-loader'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '<?php echo get_stylesheet_directory_uri(); ?>/data.json'
+      })
+    </script>
 	</body>
 </html>

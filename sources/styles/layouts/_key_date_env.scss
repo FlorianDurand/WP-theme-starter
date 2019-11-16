@@ -23,12 +23,13 @@
       align-items: flex-start;
       .left{
         font-family: $font;
-        color: $black;
+        color: $orange;
         font-style: normal;
         font-weight: bold;
         font-size: 22px;
         width: fit-content;
         margin-right: 50px;
+        line-height: 35px;
         @media screen and (max-width: 800px){
           margin-right: 10px;
           font-size: 12px;

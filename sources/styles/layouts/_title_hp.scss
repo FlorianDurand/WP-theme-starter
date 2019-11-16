@@ -1,14 +1,14 @@
 .title_hp{
-  padding: 20vh 8.3vw 100px 8.3vw;
+  padding: 21vh 8.3vw 100px 8.3vw;
   width: 100%;
   @media screen and (max-width: 800px){
     padding: 14vh 6.93vw 100px 6.93vw;
   }
   &:before{
     content: '“';
-    font-family: $font;
+    font-family: $title;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 120px;
     line-height: 120px;
     color: rgba(42, 58, 79, 0.14);
@@ -19,6 +19,7 @@
   }
   .H1{
     width: 70%;
+    margin-top: -20px;
     font-family: $title;
     font-style: normal;
     font-weight: bold;

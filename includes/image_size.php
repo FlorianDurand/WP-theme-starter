@@ -14,4 +14,5 @@ function thumbnails_theme_support() {
 	add_image_size( 'client_presta', 262 , 60, false);
 	add_image_size( 'quality_presta', 167 , 157, true);
 	add_image_size( 'last_actu', 972 , 763, true);
+	add_image_size( 'presta_presta', 350 , 90, false);
 }
