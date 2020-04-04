@@ -65,7 +65,7 @@ gulp.task("server", ["styles", "scripts"], () => {
     notify: false,
     open: "local",
     proxy: {
-      target: "http://scrapper.local/",
+      target: "http://ase.local/",
       ws: true
     },
     ghostMode: true,

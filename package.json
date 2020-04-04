@@ -1,14 +1,14 @@
 {
-  "name": "ASE",
+  "name": "xxxx",
   "version": "1.0.0",
-  "description": "## Synerg'hétic",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/1920-12/refonte-site-agroparistech-service-etudes"
+    "url": ""
   },
   "author": "",
   "license": "MIT",
@@ -49,7 +49,6 @@
     "watchify": "^3.9.0"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "vuex": "^3.1.1"
+    
   }
 }

@@ -4,15 +4,6 @@ add_action( 'after_setup_theme', 'thumbnails_theme_support' );
 
 function thumbnails_theme_support() {
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'icon_presta', 54, 54, true);
-	add_image_size( 'fullscreen_school', 2160 , 880, false);
-	add_image_size( 'fullscreen', 2880 , 1800, false);
-	add_image_size( 'school_hp', 885 , 765, true);
-	add_image_size( 'junior_env', 972 , 682, true);
-	add_image_size( 'president_env', 232 , 241, true);
-	add_image_size( 'team_env', 262 , 277, true);
-	add_image_size( 'client_presta', 262 , 60, false);
-	add_image_size( 'quality_presta', 167 , 157, true);
-	add_image_size( 'last_actu', 972 , 763, true);
-	add_image_size( 'presta_presta', 350 , 90, false);
+	add_image_size( 'icon_presta', 54, 54, true); //('name of image size',int(width), int(height), bool(crop) If false, the image will be scaled (default), If true, image will be cropped to the specified dimensions using center positions. If an array, the image will be cropped using the array to specify the crop location. Array values must be in the format: array( x_crop_position, y_crop_position ) where: - x_crop_position accepts: 'left', 'center', or 'right'. - y_crop_position accepts: 'top', 'center', or 'bottom'.)
+	
 }

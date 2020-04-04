@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Contact */
+/* Template Name: Name Of Model */
 get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

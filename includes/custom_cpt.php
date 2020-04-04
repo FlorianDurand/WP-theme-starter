@@ -1,8 +1,8 @@
 <?php
 
-function ajout_cpt_team() {
-    $post_type_team = "team";
-$labels = array(
+function add_custom_cpt() {
+    $post_type = "custom";
+    $labels = array(
         'name'               => 'Membres',
         'singular_name'      => 'Membre',
         'all_items'          => 'Tous les Membres',
@@ -29,21 +29,23 @@ $labels = array(
         'menu_icon'           => 'dashicons-groups',
         'show_in_nav_menus'   => true,
         'show_in_rest'        => true,
-        'rewrite'             => array( 'slug' => $post_type_team )
+        'rewrite'             => array( 'slug' => $post_type )
     );
 
-    register_post_type($post_type_team, $args );
+    register_post_type($post_type, $args );
 
-	$taxonomy = "type_of_member";
-	$object_type = array("team");
+	$taxonomy = "custom_taxonomy"; //if you need to create custom taxonomy for this custom post type
+	$object_type = array("team"); //array of post type or custom post type that can use this taxonomy
 	$args = array(
-		'label' => __( 'Types de Membres' ),
-		'rewrite' => array( 'slug' => 'type_of_member' ),
-		'hierarchical' => true,
+		'label' => __( 'Name of taxonomy' ), //A plural descriptive name for the taxonomy marked for translation.
+		'rewrite' => array( //Set to false to prevent automatic URL rewriting a.k.a. "pretty permalinks". Pass an $args array to override default URL settings for permalinks as outlined below:
+            'slug' => 'type_of_member' //Used as pretty permalink text (i.e. /tag/) - defaults to $taxonomy (taxonomy's name slug)
+        ),
+		'hierarchical' => true, //Is this taxonomy hierarchical (have descendants) like categories or not hierarchical like tags.
 	);
 	register_taxonomy( $taxonomy, $object_type, $args );
 }
-add_action( 'init', 'ajout_cpt_team' );
+add_action( 'init', 'add_custom_cpt' );
 
 
 
