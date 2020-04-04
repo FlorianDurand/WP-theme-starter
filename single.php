@@ -1,4 +1,4 @@
-<?php
+<?php //exemple of single.php file
 get_header(); ?>
 <div class="single-article">
 	<?php
@@ -57,11 +57,6 @@ get_header(); ?>
 				<?php endwhile;?>
 			<?php endif;
 			wp_reset_postdata();?>
-            </div>
-            <div class="swiper-scrollbar">
-                <div class="swiper-scrollbar-drag">
-
-                </div>
             </div>
         </div>
     </div>
